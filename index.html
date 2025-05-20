@@ -22,6 +22,9 @@
   <link rel="icon" href="assets/img/Favicon.ico" />
   <link rel="canonical" href="https://yoursite.com/" />
 
+  <!-------------------- Font Awesome Icones -------------------->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
   <!-------------------- CSS Libraries -------------------->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
@@ -38,13 +41,11 @@
       <!-------------------- Navbar -------------------->
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="active" href="#hero">خانه</a></li>
-          <li><a href="#services">خدمات</a></li>
-          <li><a href="#pricing">قیمت‌ها</a></li>
-          <li><a href="#booking">رزرو وقت</a></li>
-          <li><a href="#faq">سوالات متداول</a></li>
-          <li><a href="#about">درباره ما</a></li>
-          <li><a href="#contact">تماس</a></li>
+          <li><a class="active" href="#home">خانه</a></li>
+          <li><a href="#about">درباره‌ی ما</a></li>
+          <li><a href="#types">انواع ماساژ</a></li>
+          <li><a href="#reservation">رزرو آنلاین</a></li>
+          <li><a href="#contact">تماس با ما</a></li>
         </ul>
 
         <i class="bi bi-list mobile-nav-toggle"></i>
@@ -56,12 +57,12 @@
   <!-------------------- End Header -------------------->
 
   <!-------------------- Home Section -------------------->
-  <div id="hero" class="hero route bg-image" style="background-image: url(assets/img/Back02.jpg)">
+  <div id="home" class="home route bg-image" style="background-image: url(assets/img/Back02.jpg)">
     <div class="overlay-itro"></div>
-    <div class="hero-content display-table">
+    <div class="home-content display-table">
       <div class="table-cell">
         <div class="container">
-          <h1 class="hero-title mb-4">
+          <h1 class="home-title mb-4">
             <span style="font-size:100px;">ماساژ آرامش‌بخش </span>
             <br />
             <span style="font-size:150px;">کسری </span>
@@ -76,8 +77,8 @@
   <!-------------------- End Home Section -------------------->
 
   <main id="main">
-    <!-------------------- Description Section -------------------->
-    <section id="description" class="about-mf sect-pt4 route">
+    <!-------------------- About Section -------------------->
+    <section id="about" class="about-mf sect-pt4 route">
       <div class="container">
         <div class="row">
           <div class="col-sm-12">
@@ -86,15 +87,11 @@
                 <div id="idea_description" class="col-lg-6">
                   <div class="col">
                     <div class="title-box-2">
-                      <h3 class="title-a title-left" style="height:50px">عنوان</h3>
+                      <h3 class="title-a title-left" style="height:50px">درباره‌ی ما</h3>
                     </div>
-                      <p class="lead">
-                        یک متن ساده. یک متن ساده. یک متن ساده. یک متن ساده. یک متن ساده. یک متن ساده. یک متن ساده. یک متن ساده. یک متن ساده. یک متن ساده. یک متن ساده. یک متن ساده. یک متن ساده. یک متن ساده. یک متن ساده. یک متن ساده. .
-                      </p>
-                      <p class="lead">
-                        یک متن ساده. یک متن ساده. یک متن ساده. یک متن ساده. یک متن ساده. یک متن ساده. یک متن ساده. یک متن ساده. یک متن ساده. یک متن ساده. یک متن ساده. یک متن ساده. یک متن ساده. یک متن ساده. یک متن ساده.
-                      </p>
-                  </div>
+                      <p class="lead">یک متن ساده. یک متن ساده. یک متن ساده. یک متن ساده. یک متن ساده. یک متن ساده. یک متن ساده. یک متن ساده. یک متن ساده. یک متن ساده. یک متن ساده. یک متن ساده. یک متن ساده. یک متن ساده. یک متن ساده. یک متن ساده.</p>
+                      <p class="lead">در این قسمت درباره‌ی مرکز ماساژ کسری توضیحاتی نوشته خواهد شد. توضیحاتی نوشته خواهد شد.</p>
+                    </div>
                 </div>
                 <div id="idea_image" class="col-lg-6 justify-content-center">
                   <div class="col">
@@ -107,7 +104,7 @@
         </div>
       </div>
     </section>
-    <!-------------------- End Description Section -------------------->
+    <!-------------------- End About Section -------------------->
 
     <!-------------------- Counter Section -------------------->
     <section class="section-counter paralax-mf bg-image"
@@ -118,10 +115,10 @@
           <div class="col-sm-4 col-lg-4 mb-4">
             <div class="counter-box pt-4 pt-md-0">
               <div class="counter-ico">
-                <span class="ico-circle"><i class="bi bi-people"></i></span>
+                <span class="icon-circle"><i class="bi bi-people"></i></span>
               </div>
               <div class="counter-num">
-                <p data-purecounter-start="0" data-purecounter- End="350" data-purecounter-duration="2" class="counter purecounter"></p>
+                <p data-purecounter-start="0" data-purecounter-end="350" data-purecounter-duration="2" class="counter purecounter"></p>
                 <span>مشتری راضی</span>
               </div>
             </div>
@@ -130,10 +127,10 @@
           <div class="col-sm-4 col-lg-4 mb-4">
             <div class="counter-box pt-4 pt-md-0">
               <div class="counter-ico">
-                <span class="ico-circle"><i class="bi bi-clock-history"></i></span>
+                <span class="icon-circle"><i class="bi bi-clock-history"></i></span>
               </div>
               <div class="counter-num">
-                <p data-purecounter-start="0" data-purecounter- End="1200" data-purecounter-duration="2" class="counter purecounter"></p>
+                <p data-purecounter-start="0" data-purecounter-end="1200" data-purecounter-duration="2" class="counter purecounter"></p>
                 <span>ساعت ماساژ انجام‌شده</span>
               </div>
             </div>
@@ -142,10 +139,10 @@
           <div class="col-sm-4 col-lg-4 mb-4">
             <div class="counter-box pt-4 pt-md-0">
               <div class="counter-ico">
-                <span class="ico-circle"><i class="bi bi-star-fill"></i></span>
+                <span class="icon-circle"><i class="bi bi-star-fill"></i></span>
               </div>
               <div class="counter-num">
-                <p data-purecounter-start="0" data-purecounter- End="5" data-purecounter-duration="2" class="counter purecounter"></p>
+                <p data-purecounter-start="0" data-purecounter-end="5" data-purecounter-duration="2" class="counter purecounter"></p>
                 <span>سال تجربه</span>
               </div>
             </div>
@@ -155,8 +152,8 @@
     </section>
     <!-------------------- End Counter Section -------------------->
     
-    <!--------------------Items Section -------------------->
-    <section id="items" class="portfolio-mf sect-pt4 route">
+    <!-------------------- Types Section -------------------->
+    <section id="types" class="portfolio-mf sect-pt4 route">
       <div class="container">
         <div class="row">
           <div class="col-sm-12">
@@ -168,7 +165,7 @@
                   <div class="title-box text-center">
                     <h3 class="title-a">انواع ماساژ</h3>
                     <div class="line-mf" style="margin-top: 30px; margin-bottom:50px;"></div>
-                    <p class="lead">متن آماده</p>
+                    <p class="lead">متن آماده درباره‌ی انواع ماساژهایی که در مرکز ما ارائه می‌شود.</p>
                     <div class="line-mf" style="margin-top: 30px;"></div>
                   </div>
                 </div>
@@ -319,8 +316,8 @@
     </div>
     <!-------------------- End Parallax 3 Section -------------------->
 
-    <!--------------------E/R Section -------------------->
-    <section id="e_r_model" class="about-mf sect-pt4 route">
+    <!-------------------- Reservation Form Section -------------------->
+    <section id="reservation" class="about-mf sect-pt4 route">
       <div class="container">
         <div class="row">
           <div class="col-sm-12">
@@ -329,14 +326,14 @@
               <div class="row">
                 <div class="title-box-2">
                   <h3 class="title-a text-center">
-                    قسمت بعدی
+                    فرم رزرو آنلاین ماساژ
                   </h3>
                 </div>
                 <div class="line-mf" style="margin-bottom: 40px;"></div>
 
                 <div class="text-center">
                   <p class="lead">
-                    توضیح
+                    توضیح توضیح توضیح توضیح توضیح توضیح توضیح توضیح توضیح توضیح توضیح توضیح
                   </p>
                 </div>
               </div>
@@ -356,7 +353,7 @@
         </div>
       </div>
     </section>
-    <!-------------------- End E/R Section -------------------->
+    <!-------------------- End Reservation Form Section -------------------->
 
     <!-------------------- Parallax 4 Section -------------------->
     <div class="section-counter paralax-mf bg-image"
@@ -371,70 +368,117 @@
 
     <!-------------------- Contact Section -------------------->
     <section id="contact" class="about-mf sect-pt4 route">
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-12">
-        <div class="box-shadow-full">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="box-shadow-full">
 
-          <section class="contact-section container my-5">
-  <div class="row align-items-start">
-    <!-- فرم تماس (سمت چپ) -->
-    <div class="col-md-7 order-1 order-md-2">
-      <form id="contactForm" class="p-4 rounded shadow">
-        <h3 class="mb-4 text-center">فرم تماس با ما</h3>
-        <div class="mb-3">
-          <label for="name" class="form-label">نام کامل</label>
-          <input type="text" class="form-control" id="name" placeholder="مثلاً مانیای عزیز">
-        </div>
-        <div class="mb-3">
-          <label for="email" class="form-label">ایمیل</label>
-          <input type="email" class="form-control" id="email" placeholder="مثلاً example@gmail.com">
-          <div id="emailError" class="text-danger small mt-1 d-none">فرمت ایمیل درست نیست. مثلاً: example@gmail.com</div>
-        </div>
-        <div class="mb-3">
-          <label for="phone" class="form-label">شماره تماس</label>
-          <input type="tel" class="form-control" id="phone" placeholder="مثلاً 09123456789">
-          <div id="phoneError" class="text-danger small mt-1 d-none">شماره تماس باید ۱۱ رقم و با ۰۹ شروع شود</div>
-        </div>
-        <div class="form-group mb-3">
-                  <textarea name="message" class="form-control" rows="4" placeholder="پیام شما..." required></textarea>
+              <div class="row">
+                <div class="title-box-2">
+                  <h3 class="title-a text-center">
+                    تماس با ما
+                  </h3>
                 </div>
-        <button type="submit" class="btn btn-primary w-100">ارسال پیام</button>
-      </form>
-    </div>
+                <div class="line-mf" style="margin-bottom: 40px;"></div>
+              </div>
+              <section class="contact-section container my-5">
+                <div class="row align-items-start">
+                  <!-------------------- Left Contact Form -------------------->
+                  <div class="col-md-7 order-1 order-md-2">
+                    <form id="contactForm" action="https://formsubmit.co/me.hajjari@gmail.com" method="POST" novalidate class="p-4 rounded shadow">
+  <h3 class="mb-4 text-center">فرم تماس با ما</h3>
 
-    <!-- اطلاعات تماس (سمت راست) -->
-    <div class="col-md-5 order-2 order-md-1 text-end pe-4 mt-4 mt-md-0">
-      <h4>ارتباط با ما</h4>
-      <p><strong>آدرس:</strong> تهران، خیابان آزادی، پلاک ۱۰۰</p>
-      <p><strong>ساعات کاری:</strong> همه‌روزه به جز جمعه‌ها - ۹ صبح تا ۶ عصر</p>
-      <p><strong>شماره تماس:</strong> ۰۲۱-۷۷۸۸۲۴۰۰</p>
-      <!-- شبکه‌های اجتماعی -->
-      <div class="social-icons mt-4">
-        <a href="#" class="social-btn whatsapp"><i class="fab fa-whatsapp"></i></a>
-        <a href="#" class="social-btn instagram"><i class="fab fa-instagram"></i></a>
-        <a href="#" class="social-btn telegram"><i class="fab fa-telegram"></i></a>
-      </div>
-    </div>
+  <div class="mb-3">
+    <label for="name" class="form-label">نام کامل</label>
+    <input type="text" class="form-control" id="name" name="name" required>
   </div>
 
-  <!-- نقشه گوگل -->
-  <div class="row mt-5">
-    <div class="col-12">
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3239.8109336483715!2d51.36515837570448!3d35.72195882877554!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f8e00f2c2bc8b4f%3A0x7e23dbb3b4a4057a!2sAzadi%20Square!5e0!3m2!1sen!2s!4v1716100000000"
-        width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
-      </iframe>
-    </div>
+  <div class="mb-3">
+    <label for="email" class="form-label">ایمیل</label>
+    <input type="email" class="form-control" id="email" name="email" required placeholder="مثلاً example@gmail.com">
+    <div id="emailError" class="text-danger small mt-1 d-none">فرمت ایمیل درست نیست. مثلاً: example@gmail.com</div>
   </div>
-</section>
 
-
-          </div> <!-- row -->
-        </div> <!-- box-shadow-full -->
-      </div>
-    </div>
+  <div class="mb-3">
+    <label for="phone" class="form-label">شماره تماس</label>
+    <input type="tel" class="form-control" id="phone" name="phone" required placeholder="مثلاً 09123456789">
+    <div id="phoneError" class="text-danger small mt-1 d-none">شماره تماس باید ۱۱ رقم باشد و با ۰۹ شروع شود</div>
   </div>
+
+  <div class="form-group mb-3">
+    <textarea id="message" name="message" class="form-control" rows="4" placeholder="پیام شما..." required></textarea>
+    <div id="messageError" class="text-danger small mt-1 d-none">لطفاً پیام خود را وارد کنید.</div>
+  </div>
+
+  <button type="submit" class="btn btn-success w-100">ارسال پیام</button>
+</form>
+
+<!-- اینجا کد پاپ‌آپ -->
+<div id="successPopup" class="popup-overlay d-none" style="
+  position: fixed; 
+  top: 0; left: 0; right: 0; bottom: 0; 
+  background: rgba(0,0,0,0.5); 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  z-index: 9999;
+">
+  <div style="
+    background: white; 
+    padding: 20px 30px; 
+    border-radius: 10px; 
+    font-size: 18px;
+    text-align: center;
+    max-width: 300px;
+  ">
+    🌿 پیام شما با موفقیت ارسال شد. در اسرع وقت با شما تماس خواهیم گرفت.
+  </div>
+</div>
+                  </div>
+
+                  <!-------------------- Right Contact Info -------------------->
+                  <div class="col-md-5 order-2 order-md-1 text-end pe-4 mt-4 mt-md-0">
+                    <h4>   </h4>
+                    
+
+                    <p class="mb-4 mt-5"><strong class="address-text">آدرس:</strong> تهران، بلوار کاشانی، رامین شمالی</p>
+                    <p class="mb-4 mt-5"><strong class="address-text">ساعات کاری:</strong> همه‌روزه به جز جمعه‌ها - ۹ صبح تا ۶ عصر</p>
+
+                    <!-------------------- Sosials -------------------->
+                    <div class="social-icons mt-5">
+                      <a href="https://wa.me/+989107447709" target="_blank" rel="noopener noreferrer" class="social-btn whatsapp">
+                        <i class="fab fa-whatsapp fa-3x"></i>
+                      </a>
+                      <a href="https://www.instagram.com/nature_mohammad.k" target="_blank" rel="noopener noreferrer" class="social-btn instagram">
+                        <i class="fab fa-instagram fa-3x"></i>
+                      </a>
+                      <a href="https://t.me/Massage_Sarzendegi" target="_blank" rel="noopener noreferrer" class="social-btn telegram">
+                        <i class="fab fa-telegram fa-3x"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                <!-------------------- Google Map -------------------->
+                <div class="row mt-5">
+                  <div class="col-12">
+                    <iframe
+                    src="https://www.google.com/maps?q=35.725722,51.3197363&hl=fa&z=15&output=embed"
+                    width="100%"
+                    height="300"
+                    style="border:0;"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                  </div>
+                </div>
+              </section>
+
+            </div> <!-- box-shadow-full -->
+          </div> <!-- col-sm-12 -->
+        </div> <!-- row -->
+      </div> <!-- container -->
     </section>
     <!-------------------- End Contact Section -------------------->
   </main>

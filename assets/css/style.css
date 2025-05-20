@@ -2,15 +2,15 @@ body {
     font-family: 'Vazirmatn', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f2f2f2; /* پس‌زمینه روشن */
-    color: #333; /* رنگ متن تیره */
+    background-color: #f2f2f2;
+    color: #333;
     line-height: 1.6;
 }
 
 .header {
   background-color: #f5f5f5;
   padding: 15px 30px;
-  text-align: right; /* تراز محتوا به سمت راست */
+  text-align: right;
 }
 
 .title {
@@ -18,8 +18,9 @@ body {
   font-size: 24px;
   color: #333;
 }
+
 .navbar-brand {
-  margin-left: auto; /* تو حالت RTL، این می‌بره به راست */
+  margin-left: auto;
   margin-right: 0;
   text-align: right;
 }
@@ -31,15 +32,6 @@ body {
   font-weight: normal;
   font-style: normal;
 }
-
-@font-face {
-  font-family: 'Vazirmatn';
-  src: url('../font/webfonts/Vazirmatn-Bold.woff2') format('woff2'),
-       url('../font/ttf/Vazirmatn-Bold.ttf') format('truetype');
-  font-weight: bold;
-  font-style: normal;
-}
-
 
 :root {
     --primary-color: #ff0099; /* رنگ صورتی ملایم */
@@ -58,10 +50,9 @@ a:hover {
     color: var(--hover-color);
 }
 
-
 /* سایه برای بخش‌ها */
 section {
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* سایه کم‌رنگ و نرم */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 /* سایه برای دکمه‌ها */
@@ -119,24 +110,6 @@ a:hover {
   transition: all 0.5s ease-in-out;
 }
 
-.p-r {
-  position: relative;
-}
-
-.color-a {
-  text-decoration: none;
-  color: #0078ff;
-}
-
-.color-d {
-  color: #f5f5f5;
-}
-
-.color-text-a {
-  text-decoration: none;
-  color: #4e4e4e;
-}
-
 .box-shadow, .paralax-mf, .service-box, .work-box, .card-blog {
   box-shadow: 0 13px 8px -10px #e9e9e9;
   border: 1px solid #dcdcdc;
@@ -145,25 +118,6 @@ a:hover {
 .box-shadow-a, .button:hover {
   text-decoration: none;
   box-shadow: 0 0 0 10px #EDBFD5;
-}
-
-.display-5 {
-  font-size: 2.5rem;
-  font-weight: 300;
-  line-height: 1.1;
-}
-
-.display-6 {
-  font-size: 2rem;
-  font-weight: 300;
-  line-height: 1.1;
-}
-
-.avatar {
-  width: 32px;
-  height: 32px;
-  margin-right: 4px;
-  overflow: hidden;
 }
 
 .bg-image {
@@ -178,7 +132,6 @@ a:hover {
     background-attachment: scroll;
   }
 }
-
 
 .overlay-mf { /* برای عکس بک‌کراند‌ها */
   background-color: #198754;
@@ -210,7 +163,7 @@ a:hover {
   vertical-align: middle;
 }
 
-/*--/ Sections /--*/
+/*-------------------- Sections --------------------*/
 .sect-4 {
   padding: 4rem 0;
 }
@@ -223,14 +176,7 @@ a:hover {
   margin-top: 4rem;
 }
 
-/*--/ Title s /--*/
-.title-s {
-  font-weight: 600;
-  color: #1e1e1e;
-  font-size: 1.1rem;
-}
-
-/*--/ Title A /--*/
+/*-------------------- Title A --------------------*/
 .title-box {
   margin-bottom: 4rem;
 }
@@ -241,11 +187,6 @@ a:hover {
   font-weight: bold;
 }
 
-.subtitle-a {
-  text-decoration: none;
-  color: #4e4e4e;
-}
-
 .line-mf {
   width: 100px;
   height: 5px;
@@ -253,7 +194,7 @@ a:hover {
   margin: 0 auto;
 }
 
-/*--/ Title Left /--*/
+/*-------------------- Title Left --------------------*/
 .title-box-2 {
   margin-bottom: 3rem;
 }
@@ -272,7 +213,7 @@ a:hover {
   bottom: -12px;
 }
 
-/*------/ Box /------*/
+/*-------------------- Box --------------------*/
 .box-pl2 {
   padding-left: 2rem;
 }
@@ -292,16 +233,16 @@ a:hover {
   }
 }
 
-/*-------------------- Ico Circle --------------------*/
-.ico-circle {
-  height: 100px;
-  width: 100px;
+/*-------------------- Icon Circle --------------------*/
+.icon-circle {
+  height: 70px;
+  width: 70px;
   font-size: 2rem;
   border-radius: 50%;
   line-height: 1.55;
   margin: 0 auto;
   text-align: center;
-  box-shadow: 0 0 0 10px #0078ff;
+  box-shadow: 0 0 0 10px #198754;
   display: block;
 }
 
@@ -596,19 +537,19 @@ a:hover {
   display: block;
 }
 
-/* ----- Hero Section ----- */
-.hero {
+/*-------------------- Home Section --------------------*/
+.home {
   height: 100vh;
   position: relative;
   color: #fff;
 }
 
-.hero .hero-content {
+.home .home-content {
   text-align: center;
   position: absolute;
 }
 
-.hero .overlay-itro {
+.home .overlay-itro {
   background-color: rgba(0, 0, 0, 0.6);
   position: absolute;
   top: 0;
@@ -619,7 +560,7 @@ a:hover {
   opacity: .9;
 }
 
-.hero .hero-title {
+.home .home-title {
   color: #fff;
   font-weight: 600;
   font-size: 3rem;
@@ -627,63 +568,63 @@ a:hover {
 }
 
 @media (min-width: 768px) {
-  .hero .hero-title {
+  .home .home-title {
     font-size: 4.5rem;
   }
 }
 
-.hero .hero-subtitle {
+.home .home-subtitle {
   font-size: 1.5rem;
   font-weight: 600;
 }
 
 @media (min-width: 768px) {
-  .hero .hero-subtitle {
+  .home .home-subtitle {
     font-size: 2.5rem;
   }
 }
 
-.hero .text-slider-items {
+.home .text-slider-items {
   display: none;
 }
 
-.hero-single {
+.home-single {
   height: 350px;
 }
 
-.hero-single .hero-content {
+.home-single .home-content {
   margin-top: 30px;
 }
 
-.hero-single .hero-title {
+.home-single .home-title {
   text-transform: uppercase;
   font-size: 3rem;
 }
 
 @media (min-width: 768px) {
-  .hero-single .hero-title {
+  .home-single .home-title {
     font-size: 3.5rem;
   }
 }
 
-.hero-single .breadcrumb {
+.home-single .breadcrumb {
   background-color: transparent;
   color: #0078ff;
 }
 
-.hero-single .breadcrumb .breadcrumb-item:before {
+.home-single .breadcrumb .breadcrumb-item:before {
   color: #cde1f8;
 }
 
-.hero-single .breadcrumb .breadcrumb-item.active {
+.home-single .breadcrumb .breadcrumb-item.active {
   color: #cde1f8;
 }
 
-.hero-single .breadcrumb a {
+.home-single .breadcrumb a {
   color: #fff;
 }
 
-/* ----- About ----- */
+/*-------------------- About --------------------*/
 .about-mf .box-shadow-full {
   padding-top: 4rem;
   padding-bottom: 4rem;
@@ -703,8 +644,7 @@ a:hover {
     padding-left: 0rem;
   }
 }
-/* ----- Counter
------ */
+/*-------------------- Counter --------------------*/
 .counter-box {
   color: #fff;
   text-shadow: 0px 2px #191019;
@@ -733,7 +673,7 @@ a:hover {
   margin-bottom: 0;
 }
 
-/*-------------------- Massage Types -----*/
+/*-------------------- Massage Types --------------------*/
 .work-box {
   margin-bottom: 3rem;
   -webkit-backface-visibility: hidden;
@@ -785,70 +725,7 @@ a:hover {
   font-size: 1.2rem;
 }
 
-/*-------------------- Massage Types Details --------------------*/
-.portfolio-details {
-  padding-top: 40px;
-}
-
-.portfolio-details .portfolio-details-slider img {
-  width: 100%;
-}
-
-.portfolio-details .portfolio-details-slider .swiper-pagination {
-  margin-top: 20px;
-  position: relative;
-}
-
-.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet {
-  width: 12px;
-  height: 12px;
-  background-color: #fff;
-  opacity: 1;
-  border: 1px solid #0078ff;
-}
-
-.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: #0078ff;
-}
-
-.portfolio-details .portfolio-info {
-  padding: 30px;
-  box-shadow: 0px 0 30px rgba(78, 78, 78, 0.08);
-}
-
-.portfolio-details .portfolio-info h3 {
-  font-size: 22px;
-  font-weight: 700;
-  margin-bottom: 20px;
-  padding-bottom: 20px;
-  border-bottom: 1px solid #eee;
-}
-
-.portfolio-details .portfolio-info ul {
-  list-style: none;
-  padding: 0;
-  font-size: 15px;
-}
-
-.portfolio-details .portfolio-info ul li + li {
-  margin-top: 10px;
-}
-
-.portfolio-details .portfolio-description {
-  padding-top: 30px;
-}
-
-.portfolio-details .portfolio-description h2 {
-  font-size: 26px;
-  font-weight: 700;
-  margin-bottom: 20px;
-}
-
-.portfolio-details .portfolio-description p {
-  padding: 0;
-}
-
-/* ----- Contact ----- */
+/*-------------------- Contact --------------------*/
 .footer-paralax {
   padding: 4rem 0 0 0;
 }
@@ -864,6 +741,18 @@ a:hover {
   }
 }
 
+.btn-primary {
+  background-color: #6FBF73 !important;
+  border-color: #6FBF73 !important;
+  color: white !important;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: #5AA85F !important;
+  border-color: #5AA85F !important;
+}
+
 .php-email-form .error-message {
   display: none;
   color: #fff;
@@ -876,7 +765,7 @@ a:hover {
 .php-email-form .sent-message {
   display: none;
   color: #fff;
-  background: #18d26e;
+  background: #6FBF73;
   text-align: center;
   padding: 15px;
   font-weight: 600;
@@ -896,7 +785,7 @@ a:hover {
   width: 24px;
   height: 24px;
   margin: 0 10px -6px 0;
-  border: 3px solid #18d26e;
+  border: 3px solid #6FBF73;
   border-top-color: #eee;
   -webkit-animation: animate-loading 1s linear infinite;
   animation: animate-loading 1s linear infinite;
@@ -933,6 +822,12 @@ a:hover {
   background: #3393ff;
 }
 
+.address-text {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 50px;
+}
+
 .contact-section {
   direction: rtl;
   text-align: right;
@@ -941,7 +836,8 @@ a:hover {
 .social-icons {
   display: flex;
   gap: 10px;
-  justify-content: flex-end;
+  justify-content: space-evenly;
+  width: 100%;
 }
 
 .social-btn {
@@ -990,14 +886,39 @@ form textarea::placeholder {
     transform: rotate(360deg);
   }
 }
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
+.popup-content {
+  background: #e6f4ea;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  color: #155d43;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+.d-none {
+  display: none;
+}
 
 /*-------------------- Footer --------------------*/
 footer {
   text-align: center;
   color: #fff;
   padding: 25px 0;
-  background: #0062d3;
+  background: #5AA85F;
 }
 
 footer .copyright {

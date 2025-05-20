@@ -1,4 +1,3 @@
-
 (function() {
   "use strict";
 
@@ -131,46 +130,90 @@
     }
   });
 
-  /*----------  مربوط به فرم تماس ----------*/
-  document.getElementById('contactForm').addEventListener('submit', function (e) {
-  e.preventDefault();
-  
+
+  /*----------  Contact Form ----------*/
+  const form = document.getElementById('contactForm');
   const emailInput = document.getElementById('email');
-  const phoneInput = document.getElementById('phone');
   const emailError = document.getElementById('emailError');
+  const phoneInput = document.getElementById('phone');
   const phoneError = document.getElementById('phoneError');
-  
-  const email = emailInput.value.trim();
-  const phone = phoneInput.value.trim();
-  
-  let valid = true;
+  const messageInput = document.getElementById('message');
+  const messageError = document.getElementById('messageError');
+  const successPopup = document.getElementById('successPopup');
 
-  // بررسی ایمیل
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  if (!emailRegex.test(email)) {
-    emailError.classList.remove('d-none');
-    valid = false;
-  } else {
-    emailError.classList.add('d-none');
-  }
+  form.addEventListener('submit', function (e) {
+    let isValid = true;
 
-  // بررسی شماره تماس
-  const phoneRegex = /^09\d{9}$/;
-  if (!phoneRegex.test(phone)) {
-    phoneError.classList.remove('d-none');
-    valid = false;
-  } else {
-    phoneError.classList.add('d-none');
-  }
+    // چک ایمیل
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(emailInput.value)) {
+      emailError.classList.remove('d-none');
+      emailInput.classList.add('is-invalid');
+      isValid = false;
+    } else {
+      emailError.classList.add('d-none');
+      emailInput.classList.remove('is-invalid');
+    }
 
-  if (valid) {
-    alert('پیام با موفقیت ارسال شد! 🙌');
-    this.reset();
-  }
-});
+    // چک شماره تلفن
+    const phonePattern = /^09\d{9}$/;
+    if (!phonePattern.test(phoneInput.value)) {
+      phoneError.classList.remove('d-none');
+      phoneInput.classList.add('is-invalid');
+      isValid = false;
+    } else {
+      phoneError.classList.add('d-none');
+      phoneInput.classList.remove('is-invalid');
+    }
 
+    // چک پیام
+    if (!messageInput.value.trim()) {
+      messageError.classList.remove('d-none');
+      messageInput.classList.add('is-invalid');
+      isValid = false;
+    } else {
+      messageError.classList.add('d-none');
+      messageInput.classList.remove('is-invalid');
+    }
 
+    if (!isValid) {
+      e.preventDefault();
+      return;
+    }
 
+    // نمایش پاپ‌آپ بعد از ارسال
+    e.preventDefault(); // جلوگیری از ارسال فرم خودکار اول
+
+    // ارسال فرم به URL اکشن با fetch API
+    fetch(form.action, {
+      method: form.method,
+      body: new FormData(form),
+      headers: {
+        'Accept': 'application/json'
+      },
+    }).then(response => {
+      if (response.ok) {
+        successPopup.classList.remove('d-none');
+
+        // پاک کردن فرم
+        form.reset();
+
+        // بستن پاپ‌آپ با کلیک در هرجای صفحه
+        const closePopup = () => {
+          successPopup.classList.add('d-none');
+          document.removeEventListener('click', closePopup);
+        };
+        setTimeout(() => {
+          document.addEventListener('click', closePopup);
+        }, 100);
+      } else {
+        alert('خطا در ارسال فرم، لطفاً دوباره تلاش کنید.');
+      }
+    }).catch(error => {
+      alert('خطا در ارسال فرم، لطفاً دوباره تلاش کنید.');
+    });
+
+  });
 
   /*---------- Back to top button ----------*/
   let backtotop = select('.back-to-top')
