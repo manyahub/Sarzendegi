@@ -1,10 +1,12 @@
 body {
-    font-family: 'Vazirmatn', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f2f2f2;
-    color: #333;
-    line-height: 1.6;
+  font-family: "Vazirmatn", sans-serif;
+  background-color: #f2f2f2;
+  direction: rtl;
+  text-align: right;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  line-height: 1.6;
 }
 
 .header {
@@ -26,51 +28,51 @@ body {
 }
 
 @font-face {
-  font-family: 'Vazirmatn';
-  src: url('../font/webfonts/Vazirmatn-Regular.woff2') format('woff2'),
-       url('../font/ttf/Vazirmatn-Regular.ttf') format('truetype');
+  font-family: "Vazirmatn";
+  src: url("../font/webfonts/Vazirmatn-Regular.woff2") format("woff2"),
+    url("../font/ttf/Vazirmatn-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 :root {
-    --primary-color: #ff0099; /* رنگ صورتی ملایم */
-    --secondary-color: #1d1d1d; /* رنگ تیره برای نوشته‌ها */
-    --accent-color: #ff6600; /* رنگ نارنجی کم‌رنگ */
-    --background-color: #f0f0f0; /* پس‌زمینه روشن و تمیز */
-    --hover-color: #e6007e; /* رنگ تغییر هنگام هاور */
+  --primary-color: #198754;;
+  --secondary-color: #1d1d1d; /* رنگ تیره برای نوشته‌ها */
+  --accent-color: #ff6600; /* رنگ نارنجی کم‌رنگ */
+  --background-color: #f0f0f0; /* پس‌زمینه روشن و تمیز */
+  --hover-color: #428566;; /* رنگ تغییر هنگام هاور */
 }
 
 a {
-    color: var(--primary-color);
-    text-decoration: none;
+  color: var(--primary-color);
+  text-decoration: none;
 }
 
 a:hover {
-    color: var(--hover-color);
+  color: var(--hover-color);
 }
 
 /* سایه برای بخش‌ها */
 section {
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 /* سایه برای دکمه‌ها */
 button {
-    background-color: var(--primary-color);
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* سایه نرم برای دکمه‌ها */
+  background-color: var(--primary-color);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* سایه نرم برای دکمه‌ها */
 }
 
 button:hover {
-    background-color: var(--hover-color);
+  background-color: var(--hover-color);
 }
 
 .logo a {
-  font-family: 'Vazir', sans-serif;
+  font-family: "Vazir", sans-serif;
   font-weight: bold;
   font-size: 24px;
   color: #2a2a2a;
@@ -78,7 +80,7 @@ button:hover {
 }
 
 .navbar ul li a {
-  font-family: 'Vazir', sans-serif;
+  font-family: "Vazir", sans-serif;
   font-size: 16px;
   color: #444;
   transition: 0.3s;
@@ -87,7 +89,6 @@ button:hover {
 .navbar ul li a:hover {
   color: #198754; /* for hover on to menues in navbar*/
 }
-
 
 h1,
 h2,
@@ -110,14 +111,19 @@ a:hover {
   transition: all 0.5s ease-in-out;
 }
 
-.box-shadow, .paralax-mf, .service-box, .work-box, .card-blog {
+.box-shadow,
+.paralax-mf,
+.service-box,
+.work-box,
+.card-blog {
   box-shadow: 0 13px 8px -10px #e9e9e9;
   border: 1px solid #dcdcdc;
 }
 
-.box-shadow-a, .button:hover {
+.box-shadow-a,
+.button:hover {
   text-decoration: none;
-  box-shadow: 0 0 0 10px #EDBFD5;
+  box-shadow: 0 0 0 10px #9fedc9;;
 }
 
 .bg-image {
@@ -133,7 +139,8 @@ a:hover {
   }
 }
 
-.overlay-mf { /* برای عکس بک‌کراند‌ها */
+.overlay-mf {
+  /* برای عکس بک‌کراند‌ها */
   background-color: #198754;
 }
 
@@ -144,7 +151,7 @@ a:hover {
   padding: 0;
   height: 100%;
   width: 100%;
-  opacity: .7;
+  opacity: 0.7;
 }
 
 .paralax-mf {
@@ -205,7 +212,7 @@ a:hover {
 }
 
 .title-left:before {
-  content: '';
+  content: "";
   position: absolute;
   height: 5px;
   background-color: #198754;
@@ -224,7 +231,7 @@ a:hover {
   background-color: #fff;
   margin-bottom: 3rem;
   z-index: 2;
-  box-shadow: 0 1px 1px 0 #E8E0F5, 0 2px 5px 0 #E8E0F5;
+  box-shadow: 0 1px 1px 0 #e8e0f5, 0 2px 5px 0 #e8e0f5;
 }
 
 @media (min-width: 768px) {
@@ -254,7 +261,7 @@ a:hover {
   right: 15px;
   bottom: 15px;
   z-index: 996;
-  background: #198754;
+  background: #000000;
   width: 40px;
   height: 40px;
   border-radius: 50px;
@@ -268,14 +275,15 @@ a:hover {
 }
 
 .back-to-top:hover {
-  background: #9874D2;
+  background: #198754;
   color: #fff;
 }
 
 .back-to-top.active {
   visibility: visible;
   opacity: 1;
-}‍
+}
+‍
 
 /*-------------------- Header -------------------*/
 #header {
@@ -355,19 +363,23 @@ a:hover {
   width: 100%;
   height: 2px;
   bottom: -6px;
-  left: 0;
+  right: 0;
   width: 0;
   background-color: #fff;
   visibility: hidden;
   transition: all 0.3s ease-in-out 0s;
 }
 
-.navbar a:hover:before, .navbar li:hover > a:before, .navbar .active:before {
+.navbar a:hover:before,
+.navbar li:hover > a:before,
+.navbar .active:before {
   visibility: visible;
-  width: 80%;
+  width: 100%;
 }
 
-.navbar a:hover, .navbar .active, .navbar li:hover > a {
+.navbar a:hover,
+.navbar .active,
+.navbar li:hover > a {
   color: #fff;
 }
 
@@ -401,7 +413,9 @@ a:hover {
   font-size: 12px;
 }
 
-.navbar .dropdown ul a:hover, .navbar .dropdown ul .active:hover, .navbar .dropdown ul li:hover > a {
+.navbar .dropdown ul a:hover,
+.navbar .dropdown ul .active:hover,
+.navbar .dropdown ul li:hover > a {
   color: #0078ff;
 }
 
@@ -487,7 +501,9 @@ a:hover {
   padding: 0;
 }
 
-.navbar-mobile a:hover:before, .navbar-mobile li:hover > a:before, .navbar-mobile .active:before {
+.navbar-mobile a:hover:before,
+.navbar-mobile li:hover > a:before,
+.navbar-mobile .active:before {
   visibility: hidden;
 }
 
@@ -497,7 +513,9 @@ a:hover {
   color: #4e4e4e;
 }
 
-.navbar-mobile a:hover, .navbar-mobile .active, .navbar-mobile li:hover > a {
+.navbar-mobile a:hover,
+.navbar-mobile .active,
+.navbar-mobile li:hover > a {
   color: #0078ff;
 }
 
@@ -529,7 +547,9 @@ a:hover {
   font-size: 12px;
 }
 
-.navbar-mobile .dropdown ul a:hover, .navbar-mobile .dropdown ul .active:hover, .navbar-mobile .dropdown ul li:hover > a {
+.navbar-mobile .dropdown ul a:hover,
+.navbar-mobile .dropdown ul .active:hover,
+.navbar-mobile .dropdown ul li:hover > a {
   color: #0078ff;
 }
 
@@ -557,7 +577,7 @@ a:hover {
   padding: 0;
   height: 100%;
   width: 100%;
-  opacity: .9;
+  opacity: 0.9;
 }
 
 .home .home-title {
@@ -700,7 +720,7 @@ a:hover {
 
 .work-content .w-more {
   color: #4e4e4e;
-  font-size: .8rem;
+  font-size: 0.8rem;
 }
 
 .work-content .w-more .w-ctegory {
@@ -718,12 +738,166 @@ a:hover {
 }
 
 .work-content .w-like .num-like {
-  font-size: .7rem;
+  font-size: 0.7rem;
 }
 
 .w-title {
   font-size: 1.2rem;
 }
+
+
+
+
+
+/*-------------------- Forms --------------------*/
+
+form {
+      max-width: 500px;
+      margin: 4rem auto;
+      background: #e7f8ed;
+      padding: 2rem;
+      border-radius: 1rem;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    form:hover {
+      transform: translateY(-5px);
+    }
+   .form-label {
+  margin-bottom: 0.4rem;
+  display: block;
+}
+
+.form-control {
+  margin-top: 0;
+}
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+.form-select {
+  margin-top: 0;
+}
+
+    input,
+    select,
+    button {
+      width: 100%;
+      padding: 0.75rem;
+      margin-top: 1rem;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 0.5rem;
+      box-sizing: border-box;
+      transition: all 0.3s ease;
+    }
+
+    input:focus,
+    select:focus {
+      border-color: #468163;
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(87, 186, 136, 0.2);
+    }
+
+    input::placeholder {
+  color: #aaa;
+  font-style: italic;
+  opacity: 1;
+  font-size: 0.95em;
+  direction: rtl;
+  text-align: right; 
+}
+
+.field.gender {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  .field.gender label.label {
+    margin-right: 10px;
+    font-weight: bold;
+  }
+  .field.gender label.radio {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin: 0;
+    cursor: pointer;
+  }
+  .field.gender input[type="radio"] {
+    margin: 0;
+  }
+  .field.gender {
+  margin-bottom: 1rem; /* فاصله پایین فیلد جنسیت */
+}
+
+.mb-3 {
+  margin-top: 1rem; /* فاصله بالا برای موبایل */
+}
+
+
+  
+.error-message {
+  font-size: 0.9rem;
+  color: red;
+}
+
+
+    .error {
+      color: #d8000c;
+      font-size: 0.85rem;
+      margin-top: 0.5rem;
+      background-color: #ffe6e6;
+      padding: 0.5rem;
+      border-radius: 0.5rem;
+      border: 1px solid #ff4d4d;
+    }
+
+    .submit-btn {
+      background: #57ba88;
+      color: white;
+      border: none;
+      border-radius: 0.6rem;
+      cursor: pointer;
+      font-size: 1.5rem;
+      margin-top: 1.5rem;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .submit-btn::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.3);
+      transform: skewX(-45deg);
+      transition: all 0.5s ease;
+    }
+
+    .submit-btn:hover::after {
+      left: 100%;
+    }
+
+    .submit-btn:hover {
+      background-color: #49a976;
+    }
+
+    .submit-btn:active {
+      transform: scale(0.98);
+    }
+
+    @media (max-width: 600px) {
+      form {
+        margin: 2rem 1rem;
+        padding: 1.5rem;
+      }
+    }
+
 
 /*-------------------- Contact --------------------*/
 .footer-paralax {
@@ -742,84 +916,15 @@ a:hover {
 }
 
 .btn-primary {
-  background-color: #6FBF73 !important;
-  border-color: #6FBF73 !important;
+  background-color: #6fbf73 !important;
+  border-color: #6fbf73 !important;
   color: white !important;
 }
 
 .btn-primary:hover,
 .btn-primary:focus {
-  background-color: #5AA85F !important;
-  border-color: #5AA85F !important;
-}
-
-.php-email-form .error-message {
-  display: none;
-  color: #fff;
-  background: #ed3c0d;
-  text-align: center;
-  padding: 15px;
-  font-weight: 600;
-}
-
-.php-email-form .sent-message {
-  display: none;
-  color: #fff;
-  background: #6FBF73;
-  text-align: center;
-  padding: 15px;
-  font-weight: 600;
-}
-
-.php-email-form .loading {
-  display: none;
-  background: #fff;
-  text-align: center;
-  padding: 15px;
-}
-
-.php-email-form .loading:before {
-  content: "";
-  display: inline-block;
-  border-radius: 50%;
-  width: 24px;
-  height: 24px;
-  margin: 0 10px -6px 0;
-  border: 3px solid #6FBF73;
-  border-top-color: #eee;
-  -webkit-animation: animate-loading 1s linear infinite;
-  animation: animate-loading 1s linear infinite;
-}
-
-.php-email-form input, .php-email-form textarea {
-  border-radius: 0;
-  box-shadow: none;
-  font-size: 14px;
-}
-
-.php-email-form input:focus, .php-email-form textarea:focus {
-  border-color: #0078ff;
-}
-
-.php-email-form input {
-  padding: 10px 15px;
-}
-
-.php-email-form textarea {
-  padding: 12px 15px;
-  margin-bottom: 0;
-}
-
-.php-email-form button[type="submit"] {
-  background: #0078ff;
-  border: 0;
-  padding: 10px 24px;
-  color: #fff;
-  transition: 0.4s;
-}
-
-.php-email-form button[type="submit"]:hover {
-  background: #3393ff;
+  background-color: #5aa85f !important;
+  border-color: #5aa85f !important;
 }
 
 .address-text {
@@ -903,7 +1008,7 @@ form textarea::placeholder {
   background: #e6f4ea;
   padding: 2rem;
   border-radius: 1rem;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.2);
   color: #155d43;
   text-align: center;
   font-size: 1.1rem;
@@ -918,11 +1023,11 @@ footer {
   text-align: center;
   color: #fff;
   padding: 25px 0;
-  background: #5AA85F;
+  background: #5aa85f;
 }
 
 footer .copyright {
-  margin-bottom: .3rem;
+  margin-bottom: 0.3rem;
 }
 
 footer .credits {
