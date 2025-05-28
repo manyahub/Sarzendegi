@@ -168,7 +168,7 @@
       }
 
       const scriptURL =
-        "https://script.google.com/macros/s/AKfycby0A4NyoegGF5pywDHEidZs7JEcDDucbbPiWev2Xmct_URl5M5wipVp6NwMSZ6vNDrQ/exec";
+        "https://script.google.com/macros/s/AKfycbw015nvs-FDAPGZ2o1bpdhTSAS3IdLqCznxVDTJ6cdRmsI0b07dHxMw7lBcxmt0SphM/exec";
 
       const response = await fetch(scriptURL, {
         redirect: "follow",
@@ -213,7 +213,7 @@
   let availableData = {};
 
 // گرفتن اطلاعات از Google Apps Script
-fetch('https://script.google.com/macros/s/AKfycby0A4NyoegGF5pywDHEidZs7JEcDDucbbPiWev2Xmct_URl5M5wipVp6NwMSZ6vNDrQ/exec')
+fetch('https://script.google.com/macros/s/AKfycbw015nvs-FDAPGZ2o1bpdhTSAS3IdLqCznxVDTJ6cdRmsI0b07dHxMw7lBcxmt0SphM/exec')
   .then(response => response.json())
   .then(data => {
     availableData = data;
@@ -279,7 +279,7 @@ window.populateTimes = function() {
       }
 
       const scriptURL =
-        "https://script.google.com/macros/s/AKfycby0A4NyoegGF5pywDHEidZs7JEcDDucbbPiWev2Xmct_URl5M5wipVp6NwMSZ6vNDrQ/exec";
+        "https://script.google.com/macros/s/AKfycbw015nvs-FDAPGZ2o1bpdhTSAS3IdLqCznxVDTJ6cdRmsI0b07dHxMw7lBcxmt0SphM/exec";
 
       const response = await fetch(scriptURL, {
         redirect: "follow",

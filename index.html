@@ -2,28 +2,31 @@
 <html lang="fa" dir="rtl">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>ماساژ درمانی و ریلکسی | ماساژ کسری</title>
+    <title>ماساژ درمانی و ریلکسی در غرب تهران | ماساژ کسری</title>
 
     <meta
       name="description"
-      content="مرکز تخصصی ماساژ در کلن، ارائه خدمات حرفه‌ای ماساژ ریلکسی، درمانی، صورت، روغنی و تایلندی ویژه بانوان. رهایی از استرس، درد عضلات و خستگی با ماساژ کسری. رزرو آنلاین."
+      content="مرکز تخصصی ماساژ در غرب تهران، ارائه خدمات حرفه‌ای ماساژ ریلکسی، درمانی، صورت، روغنی و تایلندی ویژه بانوان و آقایان. رهایی از استرس، درد عضلات و خستگی با ماساژ کسری. رزرو آنلاین."
     />
-    <meta
-      name="keywords"
-      content="ماساژ در کلن, ماساژ ریلکسی, ماساژ درمانی, ماساژ آقایان, ماساژ صورت, ماساژ گردن و شانه, ماساژ تایلندی, ماساژ حرفه‌ای در آلمان, ماساژ ایرانی در آلمان, مرکز ماساژ کلن, ماساژ با روغن, ماساژ تخصصی, ماساژ آرامش‌بخش"
-    />
-    <meta name="author" content="Kasra Massage" />
-    <meta name="robots" content="index, follow" />
 
     <meta
+      name="keywords"
+      content="ماساژ در تهران, ماساژ ریلکسی, ماساژ درمانی, ماساژ آقایان, ماساژ صورت, ماساژ گردن و شانه, ماساژ تایلندی, ماساژ حرفه‌ای در تهران, ماساژ ایرانی در تهران, مرکز ماساژ کسری, ماساژ با روغن, ماساژ تخصصی, ماساژ آرامش‌بخش"
+    />
+
+    <meta name="author" content="مرکز ماساژ کسری" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph / Facebook -->
+    <meta
       property="og:title"
-      content="ماساژ درمانی و ریلکسی در تهران | ماساژ کسری"
+      content="ماساژ درمانی و ریلکسی در غرب تهران | ماساژ کسری"
     />
     <meta
       property="og:description"
-      content="تجربه آرامش و سلامت در مرکز ماساژ کسری. انواع خدمات ماساژ برای آقایان در تهران. رزرو وقت به‌صورت آنلاین."
+      content="تجربه آرامش و سلامت در مرکز ماساژ کسری در غرب تهران. انواع خدمات ماساژ برای بانوان و آقایان. رزرو وقت آنلاین."
     />
     <meta
       property="og:image"
@@ -31,18 +34,29 @@
     />
     <meta property="og:url" content="https://yoursite.com/" />
     <meta property="og:type" content="website" />
+
+    <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
 
+    <!-- Favicon -->
     <link rel="icon" href="assets/img/favicon.png" />
+
+    <!-- Canonical URL -->
     <link rel="canonical" href="https://yoursite.com/" />
 
-    <!-------------------- Font Awesome Icones -------------------->
+    <!-- Font Awesome Icons -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
 
-    <!-------------------- CSS Libraries -------------------->
+    <!-- Vazir Font via CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/font-face.css"
+      rel="stylesheet"
+    />
+
+    <!-- CSS Libraries -->
     <link
       href="assets/vendor/bootstrap/css/bootstrap.min.css"
       rel="stylesheet"
@@ -55,6 +69,8 @@
       href="assets/vendor/glightbox/css/glightbox.min.css"
       rel="stylesheet"
     />
+
+    <!-- Main CSS -->
     <link href="assets/css/style.css" rel="stylesheet" />
   </head>
 
@@ -170,7 +186,7 @@
                   <div id="idea_image" class="col-lg-6 justify-content-center">
                     <div class="col">
                       <img
-                        src="assets/img/MohammadKasra.jpg"
+                        src="assets/img/Mkasra.jpg"
                         class="img-fluid rounded shadow"
                         width="100%"
                         alt="ماساژ درمانی در مرکز ماساژ کسری"
@@ -484,8 +500,8 @@
                 </div>
                 <section class="contact-section container my-5">
                   <div class="row align-items-start">
-                    <!-------------------- Left Reservation Form -------------------->
-                    <div class="col-md-7 order-1 order-md-2">
+                    <!-------------------- Right Reservation Form -------------------->
+                    <div class="col-md-6 order-1 order-md-1">
                       <form id="bookingForm" class="p-4 rounded shadow">
                         <h3 class="mb-4 text-center">فرم رزرو وقت</h3>
 
@@ -499,7 +515,9 @@
                             id="date"
                             onchange="populateTimes()"
                           >
-                          <option value="">لطفاً تاریخ مورد نظر خود را انتخاب کنید</option>
+                            <option value="">
+                              لطفاً تاریخ مورد نظر خود را انتخاب کنید
+                            </option>
                           </select>
                         </div>
 
@@ -507,12 +525,15 @@
                           <label for="time" class="label">ساعت</label>
 
                           <select
-                          class="form-control"
-                          type="text"
-                          name="ساعت"
-                          id="time">
-                          <option value="">لطفاً ساعت مورد نظر خود را انتخاب کنید</option>
-                        </select>
+                            class="form-control"
+                            type="text"
+                            name="ساعت"
+                            id="time"
+                          >
+                            <option value="">
+                              لطفاً ساعت مورد نظر خود را انتخاب کنید
+                            </option>
+                          </select>
                         </div>
 
                         <div class="mb-3">
@@ -597,9 +618,9 @@
                       </form>
                     </div>
 
-                    <!-------------------- Right Description Text -------------------->
+                    <!-------------------- Left Description Text -------------------->
                     <div
-                      class="col-md-5 order-2 order-md-1 text-end pe-4 mt-4 mt-md-0"
+                      class="col-md-6 order-2 order-md-2 pe-5 mt-4 mt-4 mt-md-0"
                     >
                       <h4></h4>
 
@@ -656,8 +677,8 @@
                 </div>
                 <section class="contact-section container my-5">
                   <div class="row align-items-start">
-                    <!-------------------- Left Contact Form -------------------->
-                    <div class="col-md-7 order-1 order-md-2">
+                    <!-------------------- Right Contact Form -------------------->
+                    <div class="col-md-6 order-1 order-md-1 mb-4 mt-4">
                       <form id="contactForm" class="p-4 rounded shadow">
                         <h3 class="mb-4 text-center">فرم تماس با ما</h3>
 
@@ -741,12 +762,11 @@
                       </form>
                     </div>
 
-                    <!-------------------- Right Contact Info -------------------->
+                    <!-------------------- Left Contact Info -------------------->
                     <div
-                      class="col-md-5 order-2 order-md-1 text-end pe-4 mt-4 mt-md-0"
+                      class="col-md-6 d-flex flex-column justify-content-center order-2 order-md-2 pe-5 mb-4 mt-4 mt-md-0"
                     >
                       <h4></h4>
-
                       <p class="mb-4 mt-5">
                         <strong class="address-text">آدرس:</strong> تهران، بلوار
                         کاشانی، رامین شمالی
@@ -757,7 +777,7 @@
                       </p>
 
                       <!-------------------- Sosials -------------------->
-                      <div class="social-icons mt-5">
+                      <div class="social-icons mb-5 mt-5">
                         <a
                           href="https://wa.me/+989107447709"
                           target="_blank"
@@ -817,19 +837,22 @@
 
     <!-------------------- Footer -------------------->
     <footer class="footer">
-  <div class="container text-center text-white py-4">
-    <p class="lead mb-2">
-      ماساژ کسری | آرامش و سلامتی شما اولویت ماست
-    </p>
-    <p class="mb-1">&copy; 2025 ماساژ کسری</p>
-    <small class="credits">
-      طراحی شده توسط
-      <a href="https://github.com/Maedeam/KasraMassage" target="_blank" rel="noopener" class="footer-link">
-        Manya <i class="bi bi-github"></i>
-      </a>
-    </small>
-  </div>
-</footer>
+      <div class="container text-center text-white py-4">
+        <p class="lead mb-2">ماساژ کسری | آرامش و سلامتی شما اولویت ماست</p>
+        <p class="mb-1">&copy; 2025 ماساژ کسری</p>
+        <small class="credits">
+          طراحی شده توسط
+          <a
+            href="https://github.com/Maedeam/KasraMassage"
+            target="_blank"
+            rel="noopener"
+            class="footer-link"
+          >
+            Manya <i class="bi bi-github"></i>
+          </a>
+        </small>
+      </div>
+    </footer>
 
     <!-------------------- End  Footer -------------------->
 
