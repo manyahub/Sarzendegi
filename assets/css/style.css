@@ -1019,21 +1019,32 @@ form textarea::placeholder {
 }
 
 /*-------------------- Footer --------------------*/
-footer {
-  text-align: center;
-  color: #fff;
-  padding: 25px 0;
-  background: #5aa85f;
-}
+@import url('https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/font-face.css');
 
-footer .copyright {
-  margin-bottom: 0.3rem;
-}
+  body, .footer {
+    font-family: 'Vazir', sans-serif;
+  }
 
-footer .credits {
-  margin-bottom: 0;
-}
+  .footer {
+    background-color: #198754;
+  }
 
-footer .credits a {
-  color: #fff;
-}
+  .footer-link {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+
+  .footer-link:hover {
+    color: #d1e7dd;
+    transform: scale(1.1);
+  }
+
+  .credits {
+    font-size: 0.75rem;
+    opacity: 0.85;
+  }
