@@ -224,7 +224,7 @@ fetch('https://script.google.com/macros/s/AKfycbw015nvs-FDAPGZ2o1bpdhTSAS3IdLqCz
 // تعریف تابع populateDates به صورت global
 window.populateDates = function() {
   const dateSelect = document.getElementById("date");
-  dateSelect.innerHTML = '<option value="">لطفاً تاریخ مورد نظر خود را انتخاب کنید</option>';
+  dateSelect.innerHTML = '<option value="">لیست تاریخ‌های موجود</option>';
 
   for (let date in availableData) {
     const option = document.createElement("option");
@@ -240,7 +240,7 @@ window.populateTimes = function() {
   const timeSelect = document.getElementById("time");
   const selectedDate = dateSelect.value;
 
-  timeSelect.innerHTML = '<option value="">لطفاً ساعت مورد نظر خود را انتخاب کنید</option>';
+  timeSelect.innerHTML = '<option value="">چه ساعتی؟</option>';
 
   if (availableData[selectedDate]) {
     availableData[selectedDate].forEach(time => {

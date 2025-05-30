@@ -1,13 +1,16 @@
 body {
   font-family: "Vazirmatn", sans-serif;
-  background-color: #f2f2f2;
   direction: rtl;
   text-align: right;
   margin: 0;
   padding: 0;
   color: #333;
   line-height: 1.6;
+  position: relative;
+  z-index: 0;
+  background-color: #f0f0f0; /* رنگ پس‌زمینه روشن */
 }
+
 
 .header {
   background-color: #f5f5f5;
@@ -169,6 +172,47 @@ a:hover {
   display: table-cell;
   vertical-align: middle;
 }
+
+
+.massage-title {
+  font-size: 100px;
+}
+
+.massage-name {
+  font-size: 150px;
+}
+
+@media (max-width: 768px) {
+  .massage-title {
+    font-size: 40px;
+  }
+
+  .massage-name {
+    font-size: 50px;
+  }
+}
+
+
+
+@media (max-width: 768px) {
+  .home-title span {
+    font-size: 40px !important;
+    display: block;
+    text-align: center;
+  }
+
+  .typed {
+    font-size: 24px !important;
+    text-align: center;
+    display: block;
+  }
+
+  .home-content .container {
+    padding: 0 10px;
+    text-align: center;
+  }
+}
+
 
 /*-------------------- Sections --------------------*/
 .sect-4 {
@@ -678,7 +722,7 @@ a:hover {
 }
 
 .counter-ico {
-  margin-bottom: 1rem;
+  margin-bottom: 3rem;
 }
 
 .counter-ico .ico-circle {
@@ -689,8 +733,11 @@ a:hover {
 }
 
 .counter-num .counter {
-  font-size: 2rem;
+  font-size: 4rem;
   margin-bottom: 0;
+}
+.counter-num span {
+  font-size: 2rem;
 }
 
 /*-------------------- Massage Types --------------------*/
