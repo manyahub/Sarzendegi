@@ -39,11 +39,9 @@ body {
 }
 
 :root {
-  --primary-color: #198754;;
+  --primary-color: #155d43;;
   --secondary-color: #1d1d1d; /* رنگ تیره برای نوشته‌ها */
-  --accent-color: #ff6600; /* رنگ نارنجی کم‌رنگ */
   --background-color: #f0f0f0; /* پس‌زمینه روشن و تمیز */
-  --hover-color: #428566;; /* رنگ تغییر هنگام هاور */
 }
 
 a {
@@ -52,7 +50,7 @@ a {
 }
 
 a:hover {
-  color: var(--hover-color);
+  color: var(--primary-color);
 }
 
 /* سایه برای بخش‌ها */
@@ -71,7 +69,7 @@ button {
 }
 
 button:hover {
-  background-color: var(--hover-color);
+  background-color: var(--primary-color);
 }
 
 .logo a {
@@ -82,6 +80,11 @@ button:hover {
   text-decoration: none;
 }
 
+.logo a:hover {
+  color: #155d43 !important;
+}
+
+
 .navbar ul li a {
   font-family: "Vazir", sans-serif;
   font-size: 16px;
@@ -90,7 +93,7 @@ button:hover {
 }
 
 .navbar ul li a:hover {
-  color: #198754; /* for hover on to menues in navbar*/
+  color: #155d43; /* for hover on to menues in navbar*/
 }
 
 h1,
@@ -109,7 +112,7 @@ a {
 }
 
 a:hover {
-  color: #198754;
+  color: #155d43;
   text-decoration: none;
   transition: all 0.5s ease-in-out;
 }
@@ -126,7 +129,7 @@ a:hover {
 .box-shadow-a,
 .button:hover {
   text-decoration: none;
-  box-shadow: 0 0 0 10px #9fedc9;;
+  box-shadow: 0 0 0 7px #a1dbc5;;
 }
 
 .bg-image {
@@ -144,7 +147,7 @@ a:hover {
 
 .overlay-mf {
   /* برای عکس بک‌کراند‌ها */
-  background-color: #198754;
+  background-color: #155d43;
 }
 
 .overlay-mf {
@@ -241,7 +244,7 @@ a:hover {
 .line-mf {
   width: 100px;
   height: 5px;
-  background-color: #198754;
+  background-color: #155d43;
   margin: 0 auto;
 }
 
@@ -259,7 +262,7 @@ a:hover {
   content: "";
   position: absolute;
   height: 5px;
-  background-color: #198754;
+  background-color: #155d43;
   width: 100px;
   bottom: -12px;
 }
@@ -293,7 +296,7 @@ a:hover {
   line-height: 1.55;
   margin: 0 auto;
   text-align: center;
-  box-shadow: 0 0 0 10px #198754;
+  box-shadow: 0 0 0 10px #155d43;
   display: block;
 }
 
@@ -319,7 +322,7 @@ a:hover {
 }
 
 .back-to-top:hover {
-  background: #198754;
+  background: #155d43;
   color: #fff;
 }
 
@@ -702,6 +705,12 @@ a:hover {
   margin-left: 10px;
 }
 
+.green-border {
+  border: 10px solid #155d43;
+  border-radius: 10px; /* اختیاری: برای گوشه‌های گرد */
+}
+
+
 @media (min-width: 767px) {
   .about-mf .box-pl2 {
     margin-top: 3rem;
@@ -729,7 +738,7 @@ a:hover {
   height: 60px;
   width: 60px;
   line-height: 1.5;
-  box-shadow: 0 0 0 10px #198754;
+  box-shadow: 0 0 0 10px #155d43;
 }
 
 .counter-num .counter {
@@ -842,7 +851,7 @@ form {
 
     input:focus,
     select:focus {
-      border-color: #468163;
+      border-color: #155d43;
       outline: none;
       box-shadow: 0 0 0 3px rgba(87, 186, 136, 0.2);
     }
@@ -902,7 +911,7 @@ form {
     }
 
     .submit-btn {
-      background: #57ba88;
+      background: #155d43;
       color: white;
       border: none;
       border-radius: 0.6rem;
@@ -931,7 +940,7 @@ form {
     }
 
     .submit-btn:hover {
-      background-color: #49a976;
+      background-color: #155d43;
     }
 
     .submit-btn:active {
@@ -963,15 +972,15 @@ form {
 }
 
 .btn-primary {
-  background-color: #6fbf73 !important;
-  border-color: #6fbf73 !important;
+  background-color: #155d43 !important;
+  border-color: #155d43 !important;
   color: white !important;
 }
 
 .btn-primary:hover,
 .btn-primary:focus {
-  background-color: #5aa85f !important;
-  border-color: #5aa85f !important;
+  background-color: #155d43 !important;
+  border-color: #155d43 !important;
 }
 
 .address-text {
@@ -1006,7 +1015,7 @@ form {
 }
 
 .social-btn:hover {
-  background-color: #ffc107;
+  background-color: #155d43;
   color: white;
 }
 
@@ -1073,7 +1082,7 @@ form textarea::placeholder {
   }
 
   .footer {
-    background-color: #198754;
+    background-color: #155d43;
   }
 
   .footer-link {
