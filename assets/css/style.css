@@ -6,9 +6,19 @@
 
 @import url("https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/font-face.css");
 
+/* ست کردن فونت وزیرمتن برای همه‌ی عناصر */
+* {
+  font-family: 'Vazirmatn', sans-serif !important;
+}
+
+
+html,
 body {
-  font-family: "Vazirmatn", sans-serif;
+  font-family: 'Vazirmatn', sans-serif;
   direction: rtl;
+}
+
+body {
   text-align: right;
   margin: 0;
   padding: 0;
@@ -743,6 +753,8 @@ button {
   box-sizing: border-box;
   transition: all 0.3s ease;
   background-color: var(--skin-color);
+    font-family: 'Vazirmatn', sans-serif !important;
+
 }
 
 input:focus,
@@ -758,6 +770,7 @@ input::placeholder {
   font-size: 0.95em;
   direction: rtl;
   text-align: right;
+    font-family: 'Vazirmatn', sans-serif !important;
 }
 
 .submit-btn {
