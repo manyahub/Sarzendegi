@@ -94,24 +94,14 @@
   }
 
   /*-------------------- Mobile nav toggle --------------------*/
-  on("click", ".mobile-nav-toggle", function (e) {
-    select("#navbar").classList.toggle("navbar-mobile");
-    this.classList.toggle("bi-list");
-    this.classList.toggle("bi-x");
+
+  document.querySelectorAll('.menu-links a').forEach(link => {
+    link.addEventListener('click', () => {
+      document.getElementById('menu-trigger').checked = false;
+    });
   });
 
-  /*-------------------- Mobile nav dropdowns activate --------------------*/
-  on(
-    "click",
-    ".navbar .dropdown > a",
-    function (e) {
-      if (select("#navbar").classList.contains("navbar-mobile")) {
-        e.preventDefault();
-        this.nextElementSibling.classList.toggle("dropdown-active");
-      }
-    },
-    true
-  );
+
 
   /*-------------------- Scroll with offset on links with a class name .scrollto --------------------*/
   on(
@@ -142,6 +132,56 @@
       }
     }
   });
+
+  /*--------------------  Massage Type Modal PopUps --------------------*/
+document.addEventListener('DOMContentLoaded', function () {
+  function openModal(id) {
+  const modal = document.getElementById(id);
+  modal.classList.add('show');
+}
+
+function closeModal(id) {
+  const modal = document.getElementById(id);
+  modal.classList.remove('show');
+}
+
+  window.openModal = openModal;
+  window.closeModal = closeModal;
+
+  function scrollToItem(index) {
+    const container = document.querySelector('.scroll-wrapper');
+    const items = container.querySelectorAll('.work-box');
+    const item = items[index];
+    container.scrollTo({ left: item.offsetLeft - 10, behavior: 'smooth' });
+    updateDots(index);
+  }
+
+  window.scrollToItem = scrollToItem;
+
+  function updateDots(activeIndex) {
+    const dots = document.querySelectorAll('.dots-indicator .dot');
+    dots.forEach((dot, i) => {
+      dot.classList.toggle('active', i === activeIndex);
+    });
+  }
+
+  const scrollContainer = document.querySelector('.scroll-wrapper');
+  if (scrollContainer) {
+    scrollContainer.addEventListener('scroll', () => {
+      const items = document.querySelectorAll('.work-box');
+      let index = 0;
+      let minDiff = Infinity;
+      items.forEach((item, i) => {
+        const diff = Math.abs(scrollContainer.scrollLeft - item.offsetLeft);
+        if (diff < minDiff) {
+          minDiff = diff;
+          index = i;
+        }
+      });
+      updateDots(index);
+    });
+  }
+});
 
   /*--------------------  Reservation Form --------------------*/
   const bookingForm = document.getElementById("bookingForm");

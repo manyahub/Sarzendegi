@@ -8,7 +8,7 @@
 
     <meta
       name="description"
-      content="مرکز تخصصی ماساژ در غرب تهران، ارائه خدمات حرفه‌ای ماساژ ریلکسی، درمانی، صورت، روغنی و تایلندی ویژه بانوان و آقایان. رهایی از استرس، درد عضلات و خستگی با ماساژ سرزندگی. رزرو آنلاین."
+      content="مرکز تخصصی ماساژ تهران، ارائه خدمات حرفه‌ای ماساژ ریلکسی، درمانی، صورت، روغنی و تایلندی ویژه بانوان و آقایان. رهایی از استرس، درد عضلات و خستگی با ماساژ سرزندگی. رزرو آنلاین."
     />
 
     <meta
@@ -39,7 +39,7 @@
     <meta name="twitter:card" content="summary_large_image" />
 
     <!-- Favicon -->
-    <link rel="icon" href="assets/img/favicon.png" />
+<link rel="icon" href="assets/img/favicon-dark-circle.ico" type="image/x-icon" />
 
     <!-- Canonical URL -->
     <link rel="canonical" href="https://yoursite.com/" />
@@ -52,8 +52,9 @@
 
     <!-- Vazir Font via CDN -->
     <link
-      href="https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/font-face.css"
+      href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn-font@latest/dist/font-face.css"
       rel="stylesheet"
+      type="text/css"
     />
 
     <!-- CSS Libraries -->
@@ -81,11 +82,13 @@
 
   <body>
     <!-------------------- Header -------------------->
-    <header id="header" class="fixed-top">
+    <header id="header" class="header fixed-top">
       <div class="container d-flex align-items-center justify-content-between">
-        <h1 class="logo"><a href="index.html">ماساژ سرزندگی</a></h1>
-
-        <!-------------------- Navbar -------------------->
+        <h1 class="logo d-flex align-items-center">
+  <img src="assets/img/favicon-light-noback.png" alt="لوگو" style="height: 50px; margin-left: 10px;" />
+  <a href="index.html">ماساژ سرزندگی</a>
+</h1>
+        <!-------------------- Desktop Navbar -------------------->
         <nav id="navbar" class="navbar">
           <ul>
             <li><a class="scrollto active" href="#home">خانه</a></li>
@@ -94,11 +97,31 @@
             <li><a class="scrollto" href="#reservation">رزرو آنلاین</a></li>
             <li><a class="scrollto" href="#contact">تماس با ما</a></li>
           </ul>
-
-          <i class="bi bi-list mobile-nav-toggle"></i>
         </nav>
         <!-------------------- End Navbar -------------------->
       </div>
+      <!-------------------- Mobile Navbar -------------------->
+
+      <!-- Hamburger Menu Trigger -->
+      <input type="checkbox" id="menu-trigger" class="menu-trigger" />
+
+      <!-- Overlay Menu -->
+      <div id="fullscreen_nav" class="overlay">
+        <ul class="menu-links">
+          <li><a href="#home">خانه</a></li>
+          <li><a href="#about">درباره‌ی ما</a></li>
+          <li><a href="#types">انواع ماساژ</a></li>
+          <li><a href="#reservation">رزرو آنلاین</a></li>
+          <li><a href="#contact">تماس با ما</a></li>
+        </ul>
+      </div>
+
+      <!-- Hamburger Icon -->
+      <label for="menu-trigger" class="hamburger-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
     </header>
     <!-------------------- End Header -------------------->
 
@@ -109,98 +132,83 @@
       style="background-image: url(assets/img/Back02.jpg)"
     >
       <div class="overlay-itro"></div>
-      <div class="home-content display-table">
-        <div class="table-cell">
-          <div class="container">
-            <h1 class="home-title mb-4">
-              <span class="massage-title">با </span>
-              <br />
-              <span class="massage-title">ماساژ سرزندگی</span>
-            </h1>
-            <p>
-              <span
-                class="typed"
-                style="font-size: 50px"
-                data-typed-items="آرامش را به خود هدیه دهید"
-              ></span>
-            </p>
-          </div>
+      <div class="home-content">
+        <div class="container">
+          <h1 class="home-title mb-4">
+            <span class="massage-title">با ماساژ سرزندگی</span>
+          </h1>
+          <p>
+            <span
+              class="typed"
+              style="font-size: 50px"
+              data-typed-items="آرامش را به خود هدیه دهید"
+            ></span>
+          </p>
         </div>
       </div>
     </div>
     <!-------------------- End Home Section -------------------->
-
     <main id="main">
       <!-------------------- About Section -------------------->
-      <section id="about" class="about-mf sect-pt4 route">
+      <section id="about" class="sect-pt4 route">
         <div class="container">
+          <!-- عنوان بخش -->
+          <div class="title-box text-center">
+            <h3 class="title">درباره‌ی ما</h3>
+            <div class="line-mf"></div>
+          </div>
+
           <div class="row">
-            <div class="col-sm-12">
-              <div class="box-shadow-full">
-                <div class="row">
-                  <div id="idea_description" class="col-lg-6">
-                    <div class="col">
-                      <div class="title-box-2">
-                        <h3 class="title-a title-left" style="height: 50px">
-                          درباره‌ی ما
-                        </h3>
-                      </div>
-                      <p class="lead">
-                        <strong>مرکز ماساژ تخصصی سرزندگی</strong> در غرب تهران
-                        با هدف ارتقاء سلامت جسم و آرامش ذهن تأسیس شده است. ما با
-                        بهره‌گیری از ترکیبی از روش‌های علمی مدرن و تکنیک‌های
-                        سنتی ماساژ، محیطی گرم، آرام و حرفه‌ای را برای شما فراهم
-                        کرده‌ایم.
-                      </p>
-                      <p class="lead">
-                        این مرکز تحت هدایت و نظارت مستقیم
-                        <strong>محمدکسری حجاری</strong>، ماساژور تخصصی و
-                        با‌تجربه، فعالیت می‌کند. آقای حجاری با بیش از ۸ سال
-                        سابقه‌ی حرفه‌ای در حوزه‌ی
-                        <strong>ماساژ درمانی و کایروپراکتیک</strong>، با دقت،
-                        دانش و انرژی مثبت خود به شما کمک می‌کند تا از درد، خستگی
-                        و استرس رها شوید.
-                      </p>
-                      <p class="lead">
-                        خدمات ما شامل انواع ماساژهای تخصصی، درمانی، ریلکسیشن و
-                        همچنین خدمات در محل مشتری می‌باشد.
-                      </p>
-                      <ul
-                        class="lead"
-                        style="list-style-type: disc; padding-left: 20px"
-                      >
-                        <li>
-                          <strong>تخصص در کایروپراکتیک</strong> و تنظیم ستون
-                          فقرات
-                        </li>
-                        <li>
-                          <strong>آرامش کامل</strong> در محیطی تمیز، دوستانه و
-                          مجهز
-                        </li>
-                        <li>
-                          <strong>برنامه‌های ماساژ شخصی‌سازی‌شده</strong> بر
-                          اساس شرایط جسمی شما
-                        </li>
-                        <li>
-                          <strong>امکان دریافت خدمات در محل</strong> برای آسایش
-                          بیشتر
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div id="idea_image" class="col-lg-6 justify-content-center">
-                    <div class="col">
-                      <div data-aos="zoom-in-up" data-aos-duration="1000">
-                        <img
-                          src="assets/img/Mkasra.jpg"
-                          class="img-fluid green-border rounded shadow"
-                          width="80%"
-                          alt="ماساژ درمانی در مرکز ماساژ سرزندگی"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
+            <!-- متن -->
+            <div class="col-lg-6">
+              <p class="lead">
+                <strong>مرکز ماساژ تخصصی سرزندگی</strong> در غرب تهران با هدف
+                ارتقاء سلامت جسم و آرامش ذهن تأسیس شده است. ما با بهره‌گیری از
+                ترکیبی از روش‌های علمی مدرن و تکنیک‌های سنتی ماساژ، محیطی گرم،
+                آرام و حرفه‌ای را برای شما فراهم کرده‌ایم.
+              </p>
+              <p class="lead">
+                این مرکز تحت هدایت و نظارت مستقیم
+                <strong>محمدکسری حجاری</strong>، ماساژور تخصصی و با‌تجربه،
+                فعالیت می‌کند. آقای حجاری با بیش از ۸ سال سابقه‌ی حرفه‌ای در
+                حوزه‌ی <strong>ماساژ درمانی و کایروپراکتیک</strong>، با دقت،
+                دانش و انرژی مثبت خود به شما کمک می‌کند تا از درد، خستگی و استرس
+                رها شوید.
+              </p>
+              <p class="lead">
+                خدمات ما شامل انواع ماساژهای تخصصی، درمانی، ریلکسیشن و همچنین
+                خدمات در محل مشتری می‌باشد.
+              </p>
+              <ul
+                class="lead"
+                style="list-style-type: disc; padding-right: 20px"
+              >
+                <li>
+                  <strong>تخصص در کایروپراکتیک</strong> و تنظیم ستون فقرات
+                </li>
+                <li>
+                  <strong>آرامش کامل</strong> در محیطی تمیز، دوستانه و مجهز
+                </li>
+                <li>
+                  <strong>برنامه‌های ماساژ شخصی‌سازی‌شده</strong> بر اساس شرایط
+                  جسمی شما
+                </li>
+                <li>
+                  <strong>امکان دریافت خدمات در محل</strong> برای آسایش بیشتر
+                </li>
+              </ul>
+            </div>
+
+            <!-- عکس -->
+            <div
+              class="col-lg-6 d-flex justify-content-center align-items-center about-img-wrapper"
+            >
+              <div data-aos="zoom-in-up" data-aos-duration="1000">
+                <img
+                  src="assets/img/Mkasra.jpg"
+                  class="about-img"
+                  alt="ماساژ درمانی در مرکز ماساژ سرزندگی"
+                />
               </div>
             </div>
           </div>
@@ -284,197 +292,132 @@
       <!-------------------- End Counter Section -------------------->
 
       <!-------------------- Types Section -------------------->
-      <section id="types" class="portfolio-mf sect-pt4 route">
+      <section id="types" class="sect-pt4 route">
         <div class="container">
           <div class="row">
-            <div class="col-sm-12">
-              <div class="box-shadow-full">
-                <!--------------------Header -------------------->
-                <div id="items_header" class="row">
-                  <div class="col-sm-12">
-                    <div class="title-box text-center">
-                      <h3 class="title-a">انواع ماساژ</h3>
-                      <div
-                        class="line-mf"
-                        style="margin-top: 30px; margin-bottom: 50px"
-                      ></div>
-                      <p class="lead">
-                        متن آماده درباره‌ی انواع ماساژهایی که در مرکز ما ارائه
-                        می‌شود.
-                      </p>
-                      <div class="line-mf" style="margin-top: 30px"></div>
-                    </div>
-                  </div>
-                </div>
-                <!-------------------- End Header -------------------->
+            <div class="col-12 text-center">
+              <div class="title-box">
+                <h3 class="title">انواع ماساژ</h3>
+                <div class="line-mf"></div>
+              </div>
+              <p class="lead">
+                متن آماده درباره‌ی انواع ماساژهایی که در مرکز ما ارائه می‌شود.
+              </p>
+            </div>
+          </div>
 
-                <!--------------------Items -------------------->
-                <div id="items_content" class="row">
-                  <!--------------------Item 1 -------------------->
-                  <div class="col-md-3">
-                    <div class="work-box">
-                      <a
-                        href="assets/img/Relaxing01.jpg"
-                        data-gallery="portfolioGallery"
-                        class="portfolio-lightbox"
-                      >
-                        <div class="work-img">
-                          <img
-                            src="assets/img/Relaxing01.jpg"
-                            alt="..."
-                            class="img-fluid"
-                          />
-                        </div>
-                      </a>
-                      <div class="work-content">
-                        <div class="row">
-                          <div class="col-sm-12 text-center">
-                            <a
-                              href="http://digital.sturzo.it/spogliogenerale/1989/19890725/46/10/crisio"
-                            >
-                              <h2 class="w-title">نوع ۱</h2>
-                            </a>
-                            <div class="card-description">
-                              <span class="card-description">توضیح کوچیک</span>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="card-footer text-center">
-                        <div class="post-author">
-                          <a href="items.html#bigmuffpedal" class="scrollto">
-                            <span class="author">Metadata</span>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+          <div class="scroll-wrapper">
+            <!-- Massage Items -->
+            <div class="work-box" onclick="openModal('modal1')">
+              <div class="work-img">
+                <img
+                  src="assets/img/Relaxing01.jpg"
+                  alt="نوع اول"
+                  class="img-fluid rounded-top-4"
+                />
+              </div>
+              <div class="work-content text-center">
+                <h2 class="w-title">نوع اول</h2>
+                <p class="card-description">توضیح کوچیک</p>
+              </div>
+            </div>
 
-                  <!--------------------Item 2 -------------------->
-                  <div class="col-md-3">
-                    <div class="work-box">
-                      <a
-                        href="assets/img/Relaxing01.jpg"
-                        data-gallery="portfolioGallery"
-                        class="portfolio-lightbox"
-                      >
-                        <div class="work-img">
-                          <img
-                            src="assets/img/Relaxing01.jpg"
-                            alt="..."
-                            class="img-fluid"
-                          />
-                        </div>
-                      </a>
-                      <div class="work-content">
-                        <div class="row">
-                          <div class="col-sm-12 text-center">
-                            <a
-                              href="http://opac.unicatt.it/record=b2065436~S1*ita"
-                            >
-                              <h2 class="w-title">نوع ۲</h2>
-                            </a>
-                            <div class="card-description">
-                              <span class="card-description">توضیح کوچیک</span>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="card-footer text-center">
-                        <div class="post-author">
-                          <a href="items.html#thewall">
-                            <span class="author">Metadata</span>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+            <div
+              class="work-box"
+              data-modal-id="modal2"
+              onclick="openModal('modal2')"
+            >
+              <div class="work-img">
+                <img
+                  src="assets/img/Relaxing01.jpg"
+                  alt="نوع دوم"
+                  class="img-fluid rounded-top-4"
+                />
+              </div>
+              <div class="work-content text-center">
+                <h2 class="w-title">نوع دوم</h2>
+                <p class="card-description">توضیح کوچیک</p>
+              </div>
+            </div>
 
-                  <!--------------------Item 3 -------------------->
-                  <div class="col-md-3">
-                    <div class="work-box">
-                      <a
-                        href="assets/img/Relaxing01.jpg"
-                        data-gallery="portfolioGallery"
-                        class="portfolio-lightbox"
-                      >
-                        <div class="work-img">
-                          <img
-                            src="assets/img/Relaxing01.jpg"
-                            alt="..."
-                            class="img-fluid"
-                          />
-                        </div>
-                      </a>
-                      <div class="work-content">
-                        <div class="row">
-                          <div class="col-sm-12 text-center">
-                            <a href="https://www.loc.gov/item/2001620482">
-                              <h2 class="w-title">نوع ۳</h2>
-                            </a>
-                            <div class="card-description">
-                              <span class="card-description">توضیح کوچیک</span>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="card-footer text-center">
-                        <div class="post-author">
-                          <a href="items.html#map">
-                            <span class="author">Metadata</span>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+            <div
+              class="work-box"
+              data-modal-id="modal3"
+              onclick="openModal('modal3')"
+            >
+              <div class="work-img">
+                <img
+                  src="assets/img/Relaxing01.jpg"
+                  alt="نوع سوم"
+                  class="img-fluid rounded-top-4"
+                />
+              </div>
+              <div class="work-content text-center">
+                <h2 class="w-title">نوع سوم</h2>
+                <p class="card-description">توضیح کوچیک</p>
+              </div>
+            </div>
 
-                  <!--------------------Item 4 -------------------->
-                  <div class="col-md-3">
-                    <div class="work-box">
-                      <a
-                        href="assets/img/Relaxing01.jpg"
-                        data-gallery="portfolioGallery"
-                        class="portfolio-lightbox"
-                      >
-                        <div class="work-img">
-                          <img
-                            src="assets/img/Relaxing01.jpg"
-                            alt="..."
-                            class="img-fluid"
-                          />
-                        </div>
-                      </a>
-                      <div class="work-content">
-                        <div class="row">
-                          <div class="col-sm-12 text-center">
-                            <a
-                              href="https://miami-primo.hosted.exlibrisgroup.com/permalink/f/1bd16ni/01UOML_ALMA21292548110002976"
-                            >
-                              <h2 class="w-title">نوع ۴</h2>
-                            </a>
-                            <div class="card-description">
-                              <span class="card-description">توضیح کوچیک</span>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="card-footer text-center">
-                        <div class="post-author">
-                          <a href="items.html#boardgame">
-                            <span class="author">Metadata</span>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-------------------- End Items -------------------->
+            <div
+              class="work-box"
+              data-modal-id="modal4"
+              onclick="openModal('modal4')"
+            >
+              <div class="work-img">
+                <img
+                  src="assets/img/Relaxing01.jpg"
+                  alt="نوع چهارم"
+                  class="img-fluid rounded-top-4"
+                />
+              </div>
+              <div class="work-content text-center">
+                <h2 class="w-title">نوع چهارم</h2>
+                <p class="card-description">توضیح کوچیک</p>
               </div>
             </div>
           </div>
+
+          <!-- Dots Indicator -->
+          <div class="dots-indicator text-center mt-3">
+            <span class="dot" onclick="scrollToItem(0)"></span>
+            <span class="dot" onclick="scrollToItem(1)"></span>
+            <span class="dot" onclick="scrollToItem(2)"></span>
+            <span class="dot" onclick="scrollToItem(3)"></span>
+          </div>
+        </div>
+
+        <!-- Modals -->
+        <div id="modal1" class="modal">
+          <div class="modal-content">
+            <span class="close" onclick="closeModal('modal1')">&times;</span>
+            <h3>نوع اول</h3>
+            <p>توضیح کامل درباره ماساژ اول</p>
+          </div>
+        </div>
+        <div id="modal2" class="modal">
+          <div class="modal-content">
+            <span class="close" onclick="closeModal('modal2')">&times;</span>
+            <h3>نوع دوم</h3>
+            <p>توضیح کامل درباره ماساژ دوم</p>
+          </div>
+        </div>
+        <div id="modal3" class="modal">
+          <div class="modal-content">
+            <span class="close" onclick="closeModal('modal3')">&times;</span>
+            <h3>نوع سوم</h3>
+            <p>توضیح کامل درباره ماساژ سوم</p>
+          </div>
+        </div>
+        <div id="modal4" class="modal">
+          <div class="modal-content">
+            <span class="close" onclick="closeModal('modal4')">&times;</span>
+            <h3>نوع چهارم</h3>
+            <p>توضیح کامل درباره ماساژ چهارم</p>
+          </div>
         </div>
       </section>
-      <!-------------------- End Items Section -------------------->
+
+      <!-------------------- End Types Section -------------------->
 
       <!--------------------Parallax 3 Section -------------------->
       <div
@@ -493,163 +436,114 @@
       </div>
       <!-------------------- End Parallax 3 Section -------------------->
 
-      <!-------------------- Reservation Form Section -------------------->
-      <section id="reservation" class="about-mf sect-pt4 route">
+      <!-------------------- Reservation Section -------------------->
+      <section id="reservation" class="sect-pt4 route">
         <div class="container">
-          <div class="row">
-            <div class="col-sm-12">
-              <div class="box-shadow-full">
-                <div class="row">
-                  <div class="title-box-2">
-                    <h3 class="title-a text-center">رزرو وقت</h3>
-                  </div>
-                  <div class="line-mf"></div>
-                </div>
-                <section class="contact-section container my-5">
-                  <div class="row align-items-start">
-                    <!-------------------- Right Reservation Form -------------------->
-                    <div class="col-md-6 order-1 order-md-1">
-                      <form id="bookingForm" class="p-4 rounded shadow">
-                        <h3 class="mb-4 text-center">فرم رزرو وقت</h3>
-
-                        <div class="mb-3">
-                          <label for="date" class="label">تاریخ</label>
-
-                          <select
-                            class="form-control"
-                            type="date"
-                            name="تاریخ"
-                            id="date"
-                            onchange="populateTimes()"
-                          >
-                            <option value="">لیست تاریخ‌های موجود</option>
-                          </select>
-                        </div>
-
-                        <div class="mb-3">
-                          <label for="time" class="label">ساعت</label>
-
-                          <select
-                            class="form-control"
-                            type="text"
-                            name="ساعت"
-                            id="time"
-                          >
-                            <option value="">ابتدا تاریخ را انتخاب کنید</option>
-                          </select>
-                        </div>
-
-                        <div class="mb-3">
-                          <label class="label">نام و نام خانوادگی</label>
-                          <input
-                            name="نام"
-                            type="text"
-                            class="form-control"
-                            required
-                          />
-                        </div>
-
-                        <div class="field gender">
-                          <label class="label">جنسیت</label>
-                          <label class="radio"
-                            ><input type="radio" name="جنسیت" value="آقا" />
-                            آقا</label
-                          >
-                          <label class="radio"
-                            ><input type="radio" name="جنسیت" value="خانم" />
-                            خانم</label
-                          >
-                        </div>
-
-                        <div class="mb-3">
-                          <label class="label">شماره موبایل</label>
-                          <input
-                            name="موبایل"
-                            type="tel"
-                            class="form-control"
-                            placeholder="مثلاً 09123456789"
-                            required
-                          />
-                          <div
-                            id="contactPhoneError"
-                            class="text-danger small mt-1 d-none"
-                          >
-                            شماره تماس باید ۱۱ رقم باشد و با ۰۹ شروع شود
-                          </div>
-                        </div>
-
-                        <div class="mb-3">
-                          <label class="label">ایمیل</label>
-                          <input
-                            name="ایمیل"
-                            type="email"
-                            class="input form-control"
-                            required
-                          />
-                          <div
-                            id="emailError"
-                            class="text-danger small mt-1 d-none"
-                          >
-                            فرمت ایمیل درست نیست. مثلاً: example@gmail.com
-                          </div>
-                        </div>
-
-                        <!-- hidden field for identifying the form -->
-                        <input type="hidden" name="formType" value="booking" />
-
-                        <div class="field is-grouped">
-                          <div class="control">
-                            <button
-                              class="button is-primary"
-                              type="submit"
-                              id="submit-button"
-                            >
-                              رزرو کن
-                            </button>
-                          </div>
-                        </div>
-                        <div
-                          id="bookingMessage"
-                          style="
-                            display: none;
-                            margin: 20px;
-                            padding: 10px;
-                            border-radius: 4px;
-                            font-weight: bold;
-                          "
-                        ></div>
-                      </form>
-                    </div>
-
-                    <!-------------------- Left Description Text -------------------->
-                    <div
-                      class="col-md-6 order-2 order-md-2 pe-5 mt-4 mt-4 mt-md-0"
-                    >
-                      <h4></h4>
-
-                      <p class="mb-4 mt-5">
-                        <br />
-                        <br />
-                        <br />
-                        لطفاً مشخصات خود را وارد کرده و از بین زمان‌های آزاد،
-                        تایم دلخواه خود را انتخاب کنید.
-                        <br />
-                        <br />
-                        پس از ثبت رزرو، یک ایمیل تأیید برای شما ارسال خواهد شد.
-                      </p>
-                    </div>
-                  </div>
-                </section>
-              </div>
-              <!-- box-shadow-full -->
+          <div class="row align-items-center">
+            <div class="title-box">
+              <h3 class="title">رزرو وقت</h3>
+              <div class="line-mf"></div>
             </div>
-            <!-- col-sm-12 -->
           </div>
-          <!-- row -->
+
+          <div class="row align-items-start">
+            <!-------------------- Left Reservation Text -------------------->
+            <div class="form-text col-md-6 order-1 order-md-2">
+              <div>
+                <p class="lead">
+                  لطفاً مشخصات خود را وارد کرده و از بین زمان‌های آزاد، تایم
+                  دلخواه خود را انتخاب کنید.
+                  <br /><br /><br />
+                  پس از ثبت رزرو، یک ایمیل تأیید برای شما ارسال خواهد شد.
+                <br /><br /><br />
+                </p>
+                <video
+                  autoplay
+                  loop
+                  muted
+                  playsinline
+                  class="img-fluid about-img"
+                  style="max-width: 250px"
+                >
+                  <source
+                    src="assets/img/Massage-anime.webm"
+                    type="video/webm"
+                  />
+                  مرورگر شما از فرمت ویدیویی پشتیبانی نمی‌کند.
+                </video>
+              </div>
+            </div>
+
+            <!-------------------- Right Reservation Form -------------------->
+            <div class="col-md-6 order-2 order-md-1">
+              <form id="bookingForm" class="form-container">
+                <h3 class="form-title mb-4 text-center">فرم رزرو وقت</h3>
+
+                <div class="mb-3">
+                  <label for="date" class="label">تاریخ</label>
+                  <select name="تاریخ" id="date" onchange="populateTimes()">
+                    <option value="">لیست تاریخ‌های موجود</option>
+                  </select>
+                </div>
+
+                <div class="mb-3">
+                  <label for="time" class="label">ساعت</label>
+                  <select name="ساعت" id="time">
+                    <option value="">ابتدا تاریخ را انتخاب کنید</option>
+                  </select>
+                </div>
+
+                <div class="mb-3">
+                  <label class="label">نام و نام خانوادگی</label>
+                  <input name="نام" type="text" required />
+                </div>
+
+                <div class="mb-3 gender-group">
+                  <label class="label d-block mb-2">جنسیت</label>
+                  <label class="radio me-3">
+                    <input type="radio" name="جنسیت" value="آقا" /> آقا
+                  </label>
+                  <label class="radio">
+                    <input type="radio" name="جنسیت" value="خانم" /> خانم
+                  </label>
+                </div>
+
+                <div class="mb-3">
+                  <label class="label">شماره موبایل</label>
+                  <input
+                    name="موبایل"
+                    type="tel"
+                    placeholder="مثلاً 09123456789"
+                    required
+                  />
+                  <div
+                    id="contactPhoneError"
+                    class="text-danger small mt-1 d-none"
+                  >
+                    شماره تماس باید ۱۱ رقم باشد و با ۰۹ شروع شود
+                  </div>
+                </div>
+
+                <div class="mb-3">
+                  <label class="label">ایمیل</label>
+                  <input name="ایمیل" type="email" required />
+                  <div id="emailError" class="text-danger small mt-1 d-none">
+                    فرمت ایمیل درست نیست. مثلاً: example@gmail.com
+                  </div>
+                </div>
+
+                <button class="submit-btn" type="submit" id="submit-button">
+                  رزرو کن
+                </button>
+
+                <div id="bookingMessage" class="mt-4 d-none"></div>
+              </form>
+            </div>
+          </div>
         </div>
-        <!-- container -->
       </section>
-      <!-------------------- End Reservation Form Section -------------------->
+
+      <!-------------------- End Reservation Section -------------------->
 
       <!-------------------- Parallax 4 Section -------------------->
       <div
@@ -667,194 +561,140 @@
       <!-------------------- End Parallax 4 Section -------------------->
 
       <!-------------------- Contact Section -------------------->
-      <section id="contact" class="about-mf sect-pt4 route">
+      <section id="contact" class="sect-pt4 route">
         <div class="container">
-          <div class="row">
-            <div class="col-sm-12">
-              <div class="box-shadow-full">
-                <div class="row">
-                  <div class="title-box-2">
-                    <h3 class="title-a text-center">تماس با ما</h3>
-                  </div>
-                  <div class="line-mf"></div>
-                </div>
-                <section class="contact-section container my-5">
-                  <div class="row align-items-start">
-                    <!-------------------- Right Contact Form -------------------->
-                    <div class="col-md-6 order-1 order-md-1 mb-4 mt-4">
-                      <form id="contactForm" class="p-4 rounded shadow">
-                        <h3 class="mb-4 text-center">فرم تماس با ما</h3>
-
-                        <div class="mb-3">
-                          <label class="label">نام و نام خانوادگی</label>
-                          <input
-                            name="نام"
-                            type="text"
-                            class="form-control"
-                            required
-                          />
-                        </div>
-
-                        <div class="mb-3">
-                          <label class="label">ایمیل</label>
-                          <input
-                            name="ایمیل"
-                            type="email"
-                            class="input form-control"
-                            required
-                          />
-                          <div
-                            id="emailError"
-                            class="text-danger small mt-1 d-none"
-                          >
-                            فرمت ایمیل درست نیست. مثلاً: example@gmail.com
-                          </div>
-                        </div>
-
-                        <div class="mb-3">
-                          <label class="label">شماره موبایل</label>
-                          <input
-                            name="موبایل"
-                            type="tel"
-                            class="form-control"
-                            placeholder="مثلاً 09123456789"
-                            required
-                          />
-                          <div
-                            id="contactPhoneError"
-                            class="text-danger small mt-1 d-none"
-                          >
-                            شماره تماس باید ۱۱ رقم باشد و با ۰۹ شروع شود
-                          </div>
-                        </div>
-
-                        <div class="mb-3">
-                          <label class="label">پیام شما</label>
-                          <textarea
-                            name="پیام"
-                            class="form-control"
-                            rows="4"
-                            required
-                          ></textarea>
-                        </div>
-
-                        <!-- hidden field for identifying the form -->
-                        <input type="hidden" name="formType" value="contact" />
-
-                        <div class="field is-grouped">
-                          <div class="control">
-                            <button
-                              class="button is-primary"
-                              type="submit"
-                              id="submit-button"
-                            >
-                              ارسال کن
-                            </button>
-                          </div>
-                        </div>
-                        <div
-                          id="contactMessage"
-                          style="
-                            display: none;
-                            margin: 20px;
-                            padding: 10px;
-                            border-radius: 4px;
-                            font-weight: bold;
-                          "
-                        ></div>
-                      </form>
-                    </div>
-
-                    <!-------------------- Left Contact Info -------------------->
-                    <div
-                      class="col-md-6 d-flex flex-column justify-content-center order-2 order-md-2 pe-5 mb-4 mt-4 mt-md-0"
-                    >
-                      <h4></h4>
-                      <p class="mb-4 mt-5">
-                        <strong class="address-text">آدرس:</strong> تهران،
-                        کاشانی، رامین شمالی
-                      </p>
-                      <p class="mb-4 mt-5">
-                        <strong class="address-text">ساعات کاری:</strong>
-                        همه‌روزه به جز جمعه‌ها - ۹ صبح تا ۶ عصر
-                      </p>
-
-                      <!-------------------- Sosials -------------------->
-                      <div class="social-icons mb-5 mt-5">
-                        <a
-                          href="https://wa.me/+989107447709"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          class="social-btn whatsapp"
-                        >
-                          <i class="fab fa-whatsapp fa-3x"></i>
-                        </a>
-                        <a
-                          href="https://www.instagram.com/nature_mohammad.k"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          class="social-btn instagram"
-                        >
-                          <i class="fab fa-instagram fa-3x"></i>
-                        </a>
-                        <a
-                          href="https://t.me/Massage_Sarzendegi"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          class="social-btn telegram"
-                        >
-                          <i class="fab fa-telegram fa-3x"></i>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-------------------- Google Map -------------------->
-                  <div class="row mt-1">
-                    <div class="col-12">
-                      <iframe
-                        src="https://www.google.com/maps?q=35.725722,51.3197363&hl=fa&z=15&output=embed"
-                        width="100%"
-                        height="300"
-                        style="border: 0"
-                        allowfullscreen=""
-                        loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"
-                      >
-                      </iframe>
-                    </div>
-                  </div>
-                </section>
-              </div>
-              <!-- box-shadow-full -->
+          <div class="row align-items-center">
+            <div class="title-box">
+              <h3 class="title">تماس با ما</h3>
+              <div class="line-mf"></div>
             </div>
-            <!-- col-sm-12 -->
           </div>
-          <!-- row -->
+
+          <div class="row align-items-start">
+            <!-------------------- Left Contact Text -------------------->
+            <div class="form-text col-md-6 order-2 order-md-2">
+              <p class="lead">آدرس: تهران، کاشانی، رامین شمالی</p>
+              <p class="lead">
+                ساعات کاری: همه‌روزه به جز جمعه‌ها - ۹ صبح تا ۶ عصر
+              </p>
+
+              <!-------------------- Sosial Icones -------------------->
+              <div class="social-icons mb-2 mt-2">
+                <a
+                  href="https://wa.me/+989107447709"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="social-btn whatsapp"
+                >
+                  <i class="fab fa-whatsapp fa-3x"></i>
+                </a>
+                <a
+                  href="https://www.instagram.com/nature_mohammad.k"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="social-btn instagram"
+                >
+                  <i class="fab fa-instagram fa-3x"></i>
+                </a>
+                <a
+                  href="https://t.me/Massage_Sarzendegi"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="social-btn telegram"
+                >
+                  <i class="fab fa-telegram fa-3x"></i>
+                </a>
+              </div>
+
+              <!-------------------- Google Map -------------------->
+              <div class="map-wrapper mt-5" style="width: 100%; display: flex; justify-content: center;">
+                  <iframe
+                    src="https://www.google.com/maps?q=35.725722,51.3197363&hl=fa&z=15&output=embed"
+                    
+                    class="map"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                  ></iframe>
+                
+              </div>
+            </div>
+            <!-------------------- Right Contact Form -------------------->
+            <div class="col-md-6 order-1 order-md-1">
+              <form id="contactForm" class="form-container">
+                <h3 class="form-title mb-4 text-center">فرم تماس با ما</h3>
+
+                <div class="mb-3">
+                  <label class="label">نام و نام خانوادگی</label>
+                  <input name="نام" type="text" required />
+                </div>
+
+                <div class="mb-3">
+                  <label class="label">ایمیل</label>
+                  <input name="ایمیل" type="email" class="input" required />
+                  <div id="emailError" class="text-danger small mt-1 d-none">
+                    فرمت ایمیل درست نیست. مثلاً: example@gmail.com
+                  </div>
+                </div>
+
+                <div class="mb-3">
+                  <label class="label">شماره موبایل</label>
+                  <input
+                    name="موبایل"
+                    type="tel"
+                    placeholder="مثلاً 09123456789"
+                    required
+                  />
+                  <div
+                    id="contactPhoneError"
+                    class="text-danger small mt-1 d-none"
+                  >
+                    شماره تماس باید ۱۱ رقم باشد و با ۰۹ شروع شود
+                  </div>
+                </div>
+
+                <div class="mb-3">
+                  <label class="label">پیام شما</label>
+                  <textarea
+                    name="پیام"
+                    rows="4"
+                    required
+                  ></textarea>
+                </div>
+
+                <!-- hidden field for identifying the form -->
+                <input type="hidden" name="formType" value="contact" />
+
+                <div class="field is-grouped">
+                  <div>
+                    <button class="submit-btn" type="submit" id="submit-button">
+                      ارسال کن
+                    </button>
+                  </div>
+                </div>
+                <div id="bookingMessage" class="mt-4 d-none"></div>
+              </form>
+            </div>
+          </div>
         </div>
-        <!-- container -->
       </section>
       <!-------------------- End Contact Section -------------------->
     </main>
     <!-------------------- End main -------------------->
 
     <!-------------------- Footer -------------------->
-    <footer class="footer">
-      <div class="container text-center text-white py-4">
-        <p class="lead mb-2">ماساژ سرزندگی | آرامش و سلامتی شما اولویت ماست</p>
-        <p class="mb-1">&copy; 2025 ماساژ سرزندگی</p>
+    <footer class="footer mt-5 text-center">
+        <p class="lead mb-2">آرامش و سلامتی شما اولویت ماست</p>
+        <p class="mb-2">&copy;  تمامی حقوق مادی و معنوی برای مرکز ماساژ سرزندگی محفوظ است.</p>
         <small class="credits">
-          طراحی شده توسط
           <a
             href="https://github.com/Maedeam/KasraMassage"
             target="_blank"
             rel="noopener"
-            class="footer-link"
-          >
-            Manya <i class="bi bi-github"></i>
+            class="footer-link">
+            Design by Manya <i class="bi bi-github"></i>
           </a>
         </small>
-      </div>
     </footer>
 
     <!-------------------- End  Footer -------------------->
