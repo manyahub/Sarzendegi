@@ -772,6 +772,13 @@ input::placeholder {
     font-family: 'Vazirmatn', sans-serif !important;
 }
 
+.placeholder-option {
+  color: #aaa;
+  font-style: italic;
+}
+
+
+
 .submit-btn {
   background: var(--green-color);
   color: var(--skin-color);
