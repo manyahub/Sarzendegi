@@ -2,4 +2,4 @@
  
  Official website of Sarzendegi Massage Center
 
-[Go to the site](https://manyahub.github.io/sarzendegi)
+<a href="https://manyahub.github.io/sarzendegi" target="_blank">Go to the site</a>
