@@ -1,6 +1,9 @@
 (function () {
   "use strict";
 
+  const SCRIPT_URL =
+    "https://script.google.com/macros/s/AKfycbwD9rhST1QUvopBKOwg4zsRJzPI1HhtgxBPlvhrFZhTqIF5O7Fq4EeZpDkIXXFo_neV/exec";
+
   /*-------------------- Easy selector helper function --------------------*/
   const select = (el, all = false) => {
     el = el.trim();
@@ -95,13 +98,11 @@
 
   /*-------------------- Mobile nav toggle --------------------*/
 
-  document.querySelectorAll('.menu-links a').forEach(link => {
-    link.addEventListener('click', () => {
-      document.getElementById('menu-trigger').checked = false;
+  document.querySelectorAll(".menu-links a").forEach((link) => {
+    link.addEventListener("click", () => {
+      document.getElementById("menu-trigger").checked = false;
     });
   });
-
-
 
   /*-------------------- Scroll with offset on links with a class name .scrollto --------------------*/
   on(
@@ -134,70 +135,68 @@
   });
 
   /*--------------------  Massage Type Modal PopUps --------------------*/
-document.addEventListener('DOMContentLoaded', function () {
-  function openModal(id) {
-  const modal = document.getElementById(id);
-  modal.classList.add('show');
-}
+  document.addEventListener("DOMContentLoaded", function () {
+    function openModal(id) {
+      const modal = document.getElementById(id);
+      modal.classList.add("show");
+    }
 
-function closeModal(id) {
-  const modal = document.getElementById(id);
-  modal.classList.remove('show');
-}
+    function closeModal(id) {
+      const modal = document.getElementById(id);
+      modal.classList.remove("show");
+    }
 
-  window.openModal = openModal;
-  window.closeModal = closeModal;
+    window.openModal = openModal;
+    window.closeModal = closeModal;
 
-  function scrollToItem(index) {
-    const container = document.querySelector('.scroll-wrapper');
-    const items = container.querySelectorAll('.work-box');
-    const item = items[index];
-    container.scrollTo({ left: item.offsetLeft - 10, behavior: 'smooth' });
-    updateDots(index);
-  }
-
-  window.scrollToItem = scrollToItem;
-
-  function updateDots(activeIndex) {
-    const dots = document.querySelectorAll('.dots-indicator .dot');
-    dots.forEach((dot, i) => {
-      dot.classList.toggle('active', i === activeIndex);
-    });
-  }
-
-  const scrollContainer = document.querySelector('.scroll-wrapper');
-  if (scrollContainer) {
-    scrollContainer.addEventListener('scroll', () => {
-      const items = document.querySelectorAll('.work-box');
-      let index = 0;
-      let minDiff = Infinity;
-      items.forEach((item, i) => {
-        const diff = Math.abs(scrollContainer.scrollLeft - item.offsetLeft);
-        if (diff < minDiff) {
-          minDiff = diff;
-          index = i;
-        }
-      });
+    function scrollToItem(index) {
+      const container = document.querySelector(".scroll-wrapper");
+      const items = container.querySelectorAll(".work-box");
+      const item = items[index];
+      container.scrollTo({ left: item.offsetLeft - 10, behavior: "smooth" });
       updateDots(index);
-    });
-  }
-});
+    }
+
+    window.scrollToItem = scrollToItem;
+
+    function updateDots(activeIndex) {
+      const dots = document.querySelectorAll(".dots-indicator .dot");
+      dots.forEach((dot, i) => {
+        dot.classList.toggle("active", i === activeIndex);
+      });
+    }
+
+    const scrollContainer = document.querySelector(".scroll-wrapper");
+    if (scrollContainer) {
+      scrollContainer.addEventListener("scroll", () => {
+        const items = document.querySelectorAll(".work-box");
+        let index = 0;
+        let minDiff = Infinity;
+        items.forEach((item, i) => {
+          const diff = Math.abs(scrollContainer.scrollLeft - item.offsetLeft);
+          if (diff < minDiff) {
+            minDiff = diff;
+            index = i;
+          }
+        });
+        updateDots(index);
+      });
+    }
+  });
 
   /*--------------------  Reservation Form --------------------*/
   const bookingForm = document.getElementById("bookingForm");
-  const bookingSubmitButton = document.getElementById("submit-button");
+  const bookingSubmitButton = document.getElementById("booking-submit-button");
   const bookingMessageDiv = document.getElementById("bookingMessage");
 
   bookingForm.addEventListener("submit", async function (e) {
     e.preventDefault();
 
+    bookingMessageDiv.className = "resultMessage waiting";
     bookingMessageDiv.textContent =
       "در حال ارسال اطلاعات . . . لطفا صبر کنید  . . . ";
-    bookingMessageDiv.style.display = "block";
-    bookingMessageDiv.style.backgroundColor = "beige";
-    bookingMessageDiv.style.color = "black";
     bookingSubmitButton.disabled = true;
-    bookingSubmitButton.classList.add("is-loading");
+    bookingMessageDiv.style.display = "block";
 
     try {
       const formData = new FormData(this);
@@ -207,10 +206,7 @@ function closeModal(id) {
         formDataObj[key] = value;
       }
 
-      const scriptURL =
-        "https://script.google.com/macros/s/AKfycbw015nvs-FDAPGZ2o1bpdhTSAS3IdLqCznxVDTJ6cdRmsI0b07dHxMw7lBcxmt0SphM/exec";
-
-      const response = await fetch(scriptURL, {
+      const response = await fetch(SCRIPT_URL, {
         redirect: "follow",
         method: "POST",
         body: JSON.stringify(formDataObj),
@@ -222,93 +218,84 @@ function closeModal(id) {
       const data = await response.json();
 
       if (data.status === "success") {
+        bookingMessageDiv.className = "resultMessage success";
         bookingMessageDiv.textContent =
           data.message || "اطلاعات با موفقیت ارسال شد!";
-        bookingMessageDiv.style.backgroundColor = "#48c78e";
-        bookingMessageDiv.style.color = "white";
         bookingForm.reset();
       } else {
         throw new Error(data.message || "خطا در ارسال اطلاعات");
       }
     } catch (error) {
       console.error("Error:", error);
+      bookingMessageDiv.className = "resultMessage error";
       bookingMessageDiv.textContent = "خطا: " + error.message;
-      bookingMessageDiv.style.backgroundColor = "#f14668";
-      bookingMessageDiv.style.color = "white";
     } finally {
       bookingSubmitButton.disabled = false;
-      bookingSubmitButton.classList.remove("is-loading");
-
       setTimeout(() => {
+        bookingMessageDiv.className = "resultMessage";
         bookingMessageDiv.textContent = "";
         bookingMessageDiv.style.display = "none";
       }, 4000);
     }
   });
 
-
-
   /*--------------------  گرفتن دیتا در فرم HTML و پر کردن دراپ‌داون‌ها --------------------*/
 
   let availableData = {};
 
-// گرفتن اطلاعات از Google Apps Script
-fetch('https://script.google.com/macros/s/AKfycbw015nvs-FDAPGZ2o1bpdhTSAS3IdLqCznxVDTJ6cdRmsI0b07dHxMw7lBcxmt0SphM/exec')
-  .then(response => response.json())
-  .then(data => {
-    availableData = data;
-    populateDates(); // بعد از گرفتن دیتا، لیست تاریخ‌ها رو پر کن
-  })
-  .catch(error => console.error("خطا در گرفتن اطلاعات:", error));
+  // گرفتن اطلاعات از Google Apps Script
+  fetch(SCRIPT_URL)
+    .then((response) => response.json())
+    .then((data) => {
+      availableData = data;
+      populateDates(); // بعد از گرفتن دیتا، لیست تاریخ‌ها رو پر کن
+    })
+    .catch((error) => console.error("خطا در گرفتن اطلاعات:", error));
 
-// تعریف تابع populateDates به صورت global
-window.populateDates = function() {
-  const dateSelect = document.getElementById("date");
-  dateSelect.innerHTML = '<option value="">لیست تاریخ‌های موجود</option>';
+  // تعریف تابع populateDates به صورت global
+  window.populateDates = function () {
+    const dateSelect = document.getElementById("date");
+    dateSelect.innerHTML = '<option value="">لیست تاریخ‌های موجود</option>';
 
-  for (let date in availableData) {
-    const option = document.createElement("option");
-    option.value = date;
-    option.textContent = date;
-    dateSelect.appendChild(option);
-  }
-}
-
-// تعریف تابع populateTimes به صورت global
-window.populateTimes = function() {
-  const dateSelect = document.getElementById("date");
-  const timeSelect = document.getElementById("time");
-  const selectedDate = dateSelect.value;
-
-  timeSelect.innerHTML = '<option value="">چه ساعتی؟</option>';
-
-  if (availableData[selectedDate]) {
-    availableData[selectedDate].forEach(time => {
+    for (let date in availableData) {
       const option = document.createElement("option");
-      option.value = time;
-      option.textContent = time;
-      timeSelect.appendChild(option);
-    });
-  }
-}
+      option.value = date;
+      option.textContent = date;
+      dateSelect.appendChild(option);
+    }
+  };
 
+  // تعریف تابع populateTimes به صورت global
+  window.populateTimes = function () {
+    const dateSelect = document.getElementById("date");
+    const timeSelect = document.getElementById("time");
+    const selectedDate = dateSelect.value;
+
+    timeSelect.innerHTML = '<option value="">چه ساعتی؟</option>';
+
+    if (availableData[selectedDate]) {
+      availableData[selectedDate].forEach((time) => {
+        const option = document.createElement("option");
+        option.value = time;
+        option.textContent = time;
+        timeSelect.appendChild(option);
+      });
+    }
+  };
 
   /*--------------------  Contact Form --------------------*/
 
   const contactForm = document.getElementById("contactForm");
-  const contactSubmitButton = document.getElementById("submit-button");
+  const contactSubmitButton = document.getElementById("contact-submit-button");
   const contactMessageDiv = document.getElementById("contactMessage");
 
   contactForm.addEventListener("submit", async function (e) {
     e.preventDefault();
-
+    contactMessageDiv.className = "resultMessage success";
     contactMessageDiv.textContent =
       "در حال ارسال پیام . . . لطفا صبر کنید  . . . ";
     contactMessageDiv.style.display = "block";
-    contactMessageDiv.style.backgroundColor = "beige";
-    contactMessageDiv.style.color = "black";
     contactSubmitButton.disabled = true;
-    contactSubmitButton.classList.add("is-loading");
 
     try {
       const formData = new FormData(this);
@@ -317,11 +304,7 @@ window.populateTimes = function() {
       for (let [key, value] of formData.entries()) {
         formDataObj[key] = value;
       }
-
-      const scriptURL =
-        "https://script.google.com/macros/s/AKfycbw015nvs-FDAPGZ2o1bpdhTSAS3IdLqCznxVDTJ6cdRmsI0b07dHxMw7lBcxmt0SphM/exec";
-
-      const response = await fetch(scriptURL, {
+      const response = await fetch(SCRIPT_URL, {
         redirect: "follow",
         method: "POST",
         body: JSON.stringify(formDataObj),
@@ -333,24 +316,21 @@ window.populateTimes = function() {
       const data = await response.json();
 
       if (data.status === "success") {
+        contactMessageDiv.className = "resultMessage success";
         contactMessageDiv.textContent =
           data.message || "پیام شما با موفقیت ارسال شد!";
-        contactMessageDiv.style.backgroundColor = "#48c78e";
-        contactMessageDiv.style.color = "white";
         contactForm.reset();
       } else {
         throw new Error(data.message || "خطا در ارسال پیام");
       }
     } catch (error) {
       console.error("Error:", error);
+      contactMessageDiv.className = "resultMessage error";
       contactMessageDiv.textContent = "خطا: " + error.message;
-      contactMessageDiv.style.backgroundColor = "#f14668";
-      contactMessageDiv.style.color = "white";
     } finally {
       contactSubmitButton.disabled = false;
-      contactSubmitButton.classList.remove("is-loading");
-
       setTimeout(() => {
+        contactMessageDiv.className = "resultMessage";
         contactMessageDiv.textContent = "";
         contactMessageDiv.style.display = "none";
       }, 4000);

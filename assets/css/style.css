@@ -106,8 +106,7 @@ a:hover {
 
 /*-------------------- Header -------------------*/
 .header {
-  background-color: #323232;
-  padding: 15px 30px;
+  padding: 5px;
   text-align: right;
   transition: all 0.5s;
   z-index: 997;
@@ -119,7 +118,7 @@ a:hover {
   padding: 0;
   font-weight: 600;
   letter-spacing: 1px;
-}
+}s
 
 #header .logo a {
   color: var(--skin-color);
@@ -127,13 +126,13 @@ a:hover {
 
 #header.header-scrolled {
   background: rgba(35, 31, 31, 0.9);
-  padding: 12px 0;
+  padding: 4px 0;
 }
 
 /*-------------------- Desktop Navigation Menu --------------------*/
 
 .navbar ul li a {
-  font-family: "Vazir", sans-serif;
+  font-family: "Vazirmatn", sans-serif;
   font-size: 16px;
   color: #444;
   transition: 0.3s;
@@ -848,8 +847,26 @@ input::placeholder {
   }
 }
 
-.d-none {
+
+
+/*-------------------- Result Message --------------------*/
+.resultMessage {
   display: none;
+  margin: 8px 0;
+  padding: 8px 8px;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+.resultMessage.success {
+  color: var(--green-color);
+}
+.resultMessage.error {
+  color: #f14668;
+}
+.resultMessage.waiting {
+  color: var(--dark-color);
 }
 
 /*-------------------- Back to top button --------------------*/

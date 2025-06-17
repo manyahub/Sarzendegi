@@ -481,14 +481,19 @@
 
                 <div class="mb-3">
                   <label for="date" class="label">تاریخ</label>
-                  <select name="تاریخ" id="date" onchange="populateTimes()">
+                  <select
+                    name="تاریخ"
+                    id="date"
+                    type="date"
+                    onchange="populateTimes()"
+                  >
                     <option value="">لیست تاریخ‌های موجود</option>
                   </select>
                 </div>
 
                 <div class="mb-3">
                   <label for="time" class="label">ساعت</label>
-                  <select name="ساعت" id="time">
+                  <select name="ساعت" id="time" type="text">
                     <option value="">ابتدا تاریخ را انتخاب کنید</option>
                   </select>
                 </div>
@@ -531,13 +536,20 @@
                     فرمت ایمیل درست نیست. مثلاً: example@gmail.com
                   </div>
                 </div>
+                <!-- hidden field for identifying the form -->
+                <input type="hidden" name="formType" value="booking" />
 
-                <button class="submit-btn" type="submit" id="submit-button">
-                  رزرو کن
-                </button>
-
-                <div id="bookingMessage" class="mt-4 d-none"></div>
+                <div class="field is-grouped">
+                  <div class="control">
+                    <button id="booking-submit-button" type="submit" class="submit-btn">
+                      رزرو کن
+                    </button>
+                  </div>
+                </div>
+<div id="bookingMessage" class="resultMessage"></div>
+                
               </form>
+              
             </div>
           </div>
         </div>
@@ -667,12 +679,16 @@
 
                 <div class="field is-grouped">
                   <div>
-                    <button class="submit-btn" type="submit" id="submit-button">
+                    <button
+                      class="submit-btn"
+                      type="submit"
+                      id="contact-submit-button"
+                    >
                       ارسال کن
                     </button>
                   </div>
                 </div>
-                <div id="bookingMessage" class="mt-4 d-none"></div>
+                <div id="contactMessage" class="resultMessage"></div>
               </form>
             </div>
           </div>
@@ -684,6 +700,7 @@
 
     <!-------------------- Footer -------------------->
     <footer class="footer mt-5 text-center">
+<<<<<<< HEAD
         <p class="lead mb-2">آرامش و سلامتی شما اولویت ماست</p>
         <p class="mb-2">&copy;  تمامی حقوق مادی و معنوی برای مرکز ماساژ سرزندگی محفوظ است.</p>
         <small class="credits">
@@ -695,6 +712,22 @@
             Design by Manya <i class="bi bi-github"></i>
           </a>
         </small>
+=======
+      <p class="lead mb-2">آرامش و سلامتی شما اولویت ماست</p>
+      <p class="mb-2">
+        &copy; تمامی حقوق مادی و معنوی برای مرکز ماساژ سرزندگی محفوظ است.
+      </p>
+      <small class="credits">
+        <a
+          href="https://github.com/manyahub"
+          target="_blank"
+          rel="noopener"
+          class="footer-link"
+        >
+          Design by Manya <i class="bi bi-github"></i>
+        </a>
+      </small>
+>>>>>>> a80baba (16 Jun)
     </footer>
 
     <!-------------------- End  Footer -------------------->
