@@ -41,7 +41,6 @@ body {
 }
 
 .logo a {
-  font-family: "Vazir", sans-serif;
   font-weight: bold;
   font-size: 24px;
   color: var(--skin-color);
