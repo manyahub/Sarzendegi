@@ -39,7 +39,11 @@
     <meta name="twitter:card" content="summary_large_image" />
 
     <!-- Favicon -->
-<link rel="icon" href="assets/img/favicon-dark-circle.ico" type="image/x-icon" />
+    <link
+      rel="icon"
+      href="assets/img/favicon-dark-circle.ico"
+      type="image/x-icon"
+    />
 
     <!-- Canonical URL -->
     <link rel="canonical" href="https://yoursite.com/" />
@@ -51,7 +55,8 @@
     />
 
     <!-- Vazir Font via CDN -->
-    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css"
+    <link
+      href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css"
       rel="stylesheet"
       type="text/css"
     />
@@ -84,9 +89,13 @@
     <header id="header" class="header fixed-top">
       <div class="container d-flex align-items-center justify-content-between">
         <h1 class="logo d-flex align-items-center">
-  <img src="assets/img/favicon-light-noback.png" alt="لوگو" style="height: 50px; margin-left: 10px;" />
-  <a href="index.html">ماساژ سرزندگی</a>
-</h1>
+          <img
+            src="assets/img/favicon-light-noback.png"
+            alt="لوگو"
+            style="height: 50px; margin-left: 10px"
+          />
+          <a href="index.html">ماساژ سرزندگی</a>
+        </h1>
         <!-------------------- Desktop Navbar -------------------->
         <nav id="navbar" class="navbar">
           <ul>
@@ -234,7 +243,9 @@
             <div class="col-sm-4 col-lg-4 mb-4">
               <div class="counter-box pt-4 pt-md-0">
                 <div class="counter-ico">
-                  <span class="icon-circle"><i class="bi bi-people"></i></span>
+                  <span class="icon-circle">
+                    <i class="bi bi-people"></i>
+                  </span>
                 </div>
                 <div class="counter-num">
                   <p
@@ -251,9 +262,9 @@
             <div class="col-sm-4 col-lg-4 mb-4">
               <div class="counter-box pt-4 pt-md-0">
                 <div class="counter-ico">
-                  <span class="icon-circle"
-                    ><i class="bi bi-clock-history"></i
-                  ></span>
+                  <span class="icon-circle">
+                    <i class="bi bi-clock-history"></i>
+                  </span>
                 </div>
                 <div class="counter-num">
                   <p
@@ -306,7 +317,9 @@
           </div>
 
           <div class="scroll-wrapper">
-            <!-- Massage Items -->
+            
+            <!---------- Massage Items ---------->
+            
             <div class="work-box" onclick="openModal('modal1')">
               <div class="work-img">
                 <img
@@ -321,11 +334,7 @@
               </div>
             </div>
 
-            <div
-              class="work-box"
-              data-modal-id="modal2"
-              onclick="openModal('modal2')"
-            >
+            <div class="work-box" onclick="openModal('modal2')">
               <div class="work-img">
                 <img
                   src="assets/img/Relaxing01.jpg"
@@ -339,11 +348,7 @@
               </div>
             </div>
 
-            <div
-              class="work-box"
-              data-modal-id="modal3"
-              onclick="openModal('modal3')"
-            >
+            <div class="work-box" onclick="openModal('modal3')">
               <div class="work-img">
                 <img
                   src="assets/img/Relaxing01.jpg"
@@ -357,11 +362,7 @@
               </div>
             </div>
 
-            <div
-              class="work-box"
-              data-modal-id="modal4"
-              onclick="openModal('modal4')"
-            >
+            <div class="work-box" onclick="openModal('modal4')">
               <div class="work-img">
                 <img
                   src="assets/img/Relaxing01.jpg"
@@ -389,28 +390,36 @@
         <div id="modal1" class="modal">
           <div class="modal-content">
             <span class="close" onclick="closeModal('modal1')">&times;</span>
+            <br />
             <h3>نوع اول</h3>
+            <br />
             <p>توضیح کامل درباره ماساژ اول</p>
           </div>
         </div>
         <div id="modal2" class="modal">
           <div class="modal-content">
             <span class="close" onclick="closeModal('modal2')">&times;</span>
+            <br />
             <h3>نوع دوم</h3>
+            <br />
             <p>توضیح کامل درباره ماساژ دوم</p>
           </div>
         </div>
         <div id="modal3" class="modal">
           <div class="modal-content">
             <span class="close" onclick="closeModal('modal3')">&times;</span>
+            <br />
             <h3>نوع سوم</h3>
+            <br />
             <p>توضیح کامل درباره ماساژ سوم</p>
           </div>
         </div>
         <div id="modal4" class="modal">
           <div class="modal-content">
             <span class="close" onclick="closeModal('modal4')">&times;</span>
+            <br />
             <h3>نوع چهارم</h3>
+            <br />
             <p>توضیح کامل درباره ماساژ چهارم</p>
           </div>
         </div>
@@ -454,7 +463,7 @@
                   دلخواه خود را انتخاب کنید.
                   <br /><br /><br />
                   پس از ثبت رزرو، یک ایمیل تأیید برای شما ارسال خواهد شد.
-                <br /><br /><br />
+                  <br /><br /><br />
                 </p>
                 <video
                   autoplay
@@ -486,14 +495,18 @@
                     type="date"
                     onchange="populateTimes()"
                   >
-                    <option class="placeholder-option" value="">لیست تاریخ‌های موجود</option>
+                    <option class="placeholder-option" value="">
+                      لیست تاریخ‌های موجود
+                    </option>
                   </select>
                 </div>
 
                 <div class="mb-3">
                   <label for="time" class="label">ساعت</label>
                   <select name="ساعت" id="time" type="text">
-                    <option class="placeholder-option" value="">ابتدا تاریخ را انتخاب کنید</option>
+                    <option class="placeholder-option" value="">
+                      ابتدا تاریخ را انتخاب کنید
+                    </option>
                   </select>
                 </div>
 
@@ -540,15 +553,17 @@
 
                 <div class="field is-grouped">
                   <div class="control">
-                    <button id="booking-submit-button" type="submit" class="submit-btn">
+                    <button
+                      id="booking-submit-button"
+                      type="submit"
+                      class="submit-btn"
+                    >
                       رزرو کن
                     </button>
                   </div>
                 </div>
-<div id="bookingMessage" class="resultMessage"></div>
-                
+                <div id="bookingMessage" class="resultMessage"></div>
               </form>
-              
             </div>
           </div>
         </div>
@@ -618,16 +633,17 @@
               </div>
 
               <!-------------------- Google Map -------------------->
-              <div class="map-wrapper mt-5" style="width: 100%; display: flex; justify-content: center;">
-                  <iframe
-                    src="https://www.google.com/maps?q=35.725722,51.3197363&hl=fa&z=15&output=embed"
-                    
-                    class="map"
-                    allowfullscreen=""
-                    loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"
-                  ></iframe>
-                
+              <div
+                class="map-wrapper mt-5"
+                style="width: 100%; display: flex; justify-content: center"
+              >
+                <iframe
+                  src="https://www.google.com/maps?q=35.725722,51.3197363&hl=fa&z=15&output=embed"
+                  class="map"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                ></iframe>
               </div>
             </div>
             <!-------------------- Right Contact Form -------------------->
@@ -666,11 +682,7 @@
 
                 <div class="mb-3">
                   <label class="label">پیام شما</label>
-                  <textarea
-                    name="پیام"
-                    rows="4"
-                    required
-                  ></textarea>
+                  <textarea name="پیام" rows="4" required></textarea>
                 </div>
 
                 <!-- hidden field for identifying the form -->
@@ -699,19 +711,6 @@
 
     <!-------------------- Footer -------------------->
     <footer class="footer mt-5 text-center">
-<<<<<<< HEAD
-        <p class="lead mb-2">آرامش و سلامتی شما اولویت ماست</p>
-        <p class="mb-2">&copy;  تمامی حقوق مادی و معنوی برای مرکز ماساژ سرزندگی محفوظ است.</p>
-        <small class="credits">
-          <a
-            href="https://github.com/Maedeam/KasraMassage"
-            target="_blank"
-            rel="noopener"
-            class="footer-link">
-            Design by Manya <i class="bi bi-github"></i>
-          </a>
-        </small>
-=======
       <p class="lead mb-2">آرامش و سلامتی شما اولویت ماست</p>
       <p class="mb-2">
         &copy; تمامی حقوق مادی و معنوی برای مرکز ماساژ سرزندگی محفوظ است.
@@ -726,7 +725,6 @@
           Design by Manya <i class="bi bi-github"></i>
         </a>
       </small>
->>>>>>> a80baba (16 Jun)
     </footer>
 
     <!-------------------- End  Footer -------------------->

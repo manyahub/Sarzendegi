@@ -525,7 +525,7 @@ a:hover {
 .icon-circle {
   height: 70px;
   width: 70px;
-  font-size: 2.5rem;
+  font-size: 2rem;
   border-radius: 50%;
   line-height: 1.55;
   margin: 0 auto;
@@ -629,7 +629,7 @@ a:hover {
   position: absolute;
   top: 10px;
   right: 15px;
-  font-size: 1.5rem;
+  font-size: 2rem;
   cursor: pointer;
 }
 
@@ -673,41 +673,6 @@ a:hover {
   .form-text {
     padding: 1.5rem;
   }
-}
-
-.social-icons {
-  display: flex;
-  gap: 5px;
-  justify-content: space-evenly;
-  width: 100%;
-}
-
-.social-btn {
-  display: inline-flex;
-  width: 40px;
-  height: 40px;
-  background-color: var(--dark-color);
-  color: var(--skin-color);
-  border-radius: 50%;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  transition: all 0.2s;
-}
-.social-btn:hover {
-  background-color: var(--green-color);
-  color: white;
-}
-
-.map {
-  width: 100%;
-  max-width: 100%;
-  height: 300px;
-  border: 1px solid var(--green-color);
-  border-radius: 12px;
-  display: block;
-  margin: 0 auto;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 .form-title {
@@ -775,8 +740,6 @@ input::placeholder {
   color: #aaa;
   font-style: italic;
 }
-
-
 
 .submit-btn {
   background: var(--green-color);
@@ -854,7 +817,6 @@ input::placeholder {
 }
 
 
-
 /*-------------------- Result Message --------------------*/
 .resultMessage {
   display: none;
@@ -873,6 +835,51 @@ input::placeholder {
 }
 .resultMessage.waiting {
   color: var(--dark-color);
+}
+
+
+
+
+
+
+/*-------------------- Social Icons Section --------------------*/
+.fa-brands, .fab {
+    font-family: "Font Awesome 6 Brands" !important;
+}
+
+.social-icons {
+  display: flex;
+  gap: 5px;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.social-btn {
+  display: inline-flex;
+  width: 40px;
+  height: 40px;
+  background-color: var(--dark-color);
+  color: var(--skin-color);
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+.social-btn:hover {
+  background-color: var(--green-color);
+  color: white;
+}
+
+.map {
+  width: 100%;
+  max-width: 100%;
+  height: 300px;
+  border: 1px solid var(--green-color);
+  border-radius: 12px;
+  display: block;
+  margin: 0 auto;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 /*-------------------- Back to top button --------------------*/
@@ -921,7 +928,7 @@ input::placeholder {
   text-decoration: none;
   font-weight: 600;
   display: inline-flex;
-  align-items: center;
+  align-items: baseline;
   gap: 6px;
   transition: all 0.3s ease;
   padding: 4px 8px;
@@ -929,10 +936,18 @@ input::placeholder {
 
 .footer-link:hover {
   color: var(--green-color);
-  text-shadow: 0 0 6px var(--skin-color),
-    /* سبز نئونی روشن برای glow */ 0 0 10px #00ff7f, 0 0 20px #00ff7f;
+  text-shadow: 0 0 6px var(--skin-color), 0 0 10px #00ff7f, 0 0 20px #00ff7f;
   transform: scale(1.05);
 }
+
+
+.footer-link i {
+  font-size: 1.2em;
+  line-height: 1;
+position: relative;
+  top: -4px;
+}
+
 
 .credits {
   font-size: 0.75rem;

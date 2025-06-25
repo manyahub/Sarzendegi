@@ -97,7 +97,6 @@
   }
 
   /*-------------------- Mobile nav toggle --------------------*/
-
   document.querySelectorAll(".menu-links a").forEach((link) => {
     link.addEventListener("click", () => {
       document.getElementById("menu-trigger").checked = false;
